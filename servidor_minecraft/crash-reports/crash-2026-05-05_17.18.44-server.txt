@@ -1,0 +1,645 @@
+---- Minecraft Crash Report ----
+
+// Hi. I'm Connector, and I'm a crashaholic
+=========================
+SINYTRA CONNECTOR IS PRESENT!
+Please verify issues are not caused by Connector before reporting them to mod authors.
+If you're unsure, file a report on Connector's issue tracker found at https://github.com/Sinytra/Connector/issues.
+=========================
+
+// Oops.
+
+Time: 2026-05-05 17:18:44
+Description: Watching Server
+
+java.lang.Error: ServerHangWatchdog detected that a single server tick took 60.00 seconds (should be max 0.05)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258) ~[?:?] {}
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510) ~[?:?] {}
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[?:?] {}
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:575) ~[?:?] {}
+	at java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260) ~[?:?] {}
+	at java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:616) ~[?:?] {}
+	at java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:622) ~[?:?] {}
+	at java.util.stream.ReferencePipeline.toList(ReferencePipeline.java:627) ~[?:?] {}
+	at net.minecraft.commands.arguments.selector.EntitySelector.m_121160_(EntitySelector.java:112) ~[server-1.20.1-20230612.114412-srg.jar%23375!/:?] {re:classloading,pl:accesstransformer:B,pl:connector_pre_launch:A}
+	at net.minecraft.commands.arguments.EntityArgument.m_91467_(EntityArgument.java:65) ~[server-1.20.1-20230612.114412-srg.jar%23375!/:?] {re:classloading,pl:connector_pre_launch:A}
+	at net.minecraft.server.commands.ExecuteCommand.m_137230_(ExecuteCommand.java:572) ~[server-1.20.1-20230612.114412-srg.jar%23375!/:?] {re:classloading,pl:connector_pre_launch:A}
+	at net.minecraft.server.commands.ExecuteCommand$$Lambda$25424/0x000070a29eea4890.apply(Unknown Source) ~[?:?] {}
+	at com.mojang.brigadier.CommandDispatcher.execute(CommandDispatcher.java:242) ~[brigadier-1.1.8.jar%2376!/:?] {}
+	at net.minecraft.commands.CommandFunction$CommandEntry.m_164875_(CommandFunction.java:96) ~[server-1.20.1-20230612.114412-srg.jar%23375!/:?] {re:classloading,pl:connector_pre_launch:A}
+	at net.minecraft.commands.CommandFunction$CommandEntry.m_142134_(CommandFunction.java:90) ~[server-1.20.1-20230612.114412-srg.jar%23375!/:?] {re:classloading,pl:connector_pre_launch:A}
+	at net.minecraft.server.ServerFunctionManager$QueuedCommand.m_179985_(ServerFunctionManager.java:135) ~[server-1.20.1-20230612.114412-srg.jar%23375!/:?] {re:classloading,pl:connector_pre_launch:A}
+	at net.minecraft.server.ServerFunctionManager$ExecutionContext.m_179977_(ServerFunctionManager.java:210) ~[server-1.20.1-20230612.114412-srg.jar%23375!/:?] {re:classloading,pl:connector_pre_launch:A}
+	at net.minecraft.server.ServerFunctionManager.m_179960_(ServerFunctionManager.java:85) ~[server-1.20.1-20230612.114412-srg.jar%23375!/:?] {re:mixin,pl:connector_pre_launch:A,re:classloading,pl:mixin:APP:modernfix-common.mixins.json:feature.mcfunction_profiling.ServerFunctionManagerMixin from mod modernfix,pl:mixin:A,pl:connector_pre_launch:A}
+	at net.minecraft.server.ServerFunctionManager.m_136112_(ServerFunctionManager.java:69) ~[server-1.20.1-20230612.114412-srg.jar%23375!/:?] {re:mixin,pl:connector_pre_launch:A,re:classloading,pl:mixin:APP:modernfix-common.mixins.json:feature.mcfunction_profiling.ServerFunctionManagerMixin from mod modernfix,pl:mixin:A,pl:connector_pre_launch:A}
+	at net.minecraft.world.level.timers.FunctionCallback.m_82175_(FunctionCallback.java:18) ~[server-1.20.1-20230612.114412-srg.jar%23375!/:?] {re:classloading,pl:connector_pre_launch:A}
+	at net.minecraft.world.level.timers.FunctionCallback$$Lambda$28923/0x000070a29f2ba820.accept(Unknown Source) ~[?:?] {}
+	at java.util.Optional.ifPresent(Optional.java:178) ~[?:?] {re:mixin}
+	at net.minecraft.world.level.timers.FunctionCallback.m_5821_(FunctionCallback.java:18) ~[server-1.20.1-20230612.114412-srg.jar%23375!/:?] {re:classloading,pl:connector_pre_launch:A}
+	at net.minecraft.world.level.timers.FunctionCallback.m_5821_(FunctionCallback.java:8) ~[server-1.20.1-20230612.114412-srg.jar%23375!/:?] {re:classloading,pl:connector_pre_launch:A}
+	at net.minecraft.world.level.timers.TimerQueue.m_82256_(TimerQueue.java:84) ~[server-1.20.1-20230612.114412-srg.jar%23375!/:?] {re:classloading,pl:connector_pre_launch:A}
+	at net.minecraft.server.level.ServerLevel.m_8809_(ServerLevel.java:367) ~[server-1.20.1-20230612.114412-srg.jar%23375!/:?] {re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:cupboard.mixins.json:ServerAddEntityMixin from mod cupboard,pl:mixin:APP:modernfix-common.mixins.json:bugfix.chunk_deadlock.ServerLevelMixin from mod modernfix,pl:mixin:APP:modernfix-common.mixins.json:perf.faster_structure_location.ServerLevelMixin from mod modernfix,pl:mixin:APP:modernfix-common.mixins.json:perf.cache_strongholds.ServerLevelMixin from mod modernfix,pl:mixin:APP:botania_xplat.mixins.json:ServerLevelMixin from mod botania,pl:mixin:APP:majruszlibrary-common.mixins.json:IMixinServerLevel from mod majruszlibrary,pl:mixin:APP:majruszlibrary-common.mixins.json:MixinServerLevel from mod majruszlibrary,pl:mixin:APP:glitchcore.mixins.json:MixinServerLevel from mod glitchcore,pl:mixin:APP:sereneseasons.mixins.json:MixinServerLevel from mod sereneseasons,pl:mixin:APP:imm_ptl.mixins.json:common.MixinServerLevel from mod immersive_portals,pl:mixin:APP:imm_ptl_peripheral.mixins.json:common.alternate_dimension.MixinServerLevel_ModifySeed from mod immersive_portals,pl:mixin:APP:citadel.mixins.json:ServerLevelMixin from mod citadel,pl:mixin:APP:fabric-data-attachment-api-v1.mixins.json:ServerWorldMixin from mod fabric_data_attachment_api_v1,pl:mixin:APP:fabric-api-lookup-api-v1.mixins.json:ServerWorldMixin from mod fabric_api_lookup_api_v1,pl:mixin:APP:multidim.mixins.json:ServerWorldMixin from mod amblekit,pl:mixin:APP:fabric-lifecycle-events-v1.mixins.json:ServerWorldMixin from mod fabric_lifecycle_events_v1,pl:mixin:APP:blueprint.mixins.json:ServerLevelMixin from mod blueprint,pl:mixin:APP:moonlight-common.mixins.json:ServerLevelMixin from mod moonlight,pl:mixin:APP:supplementaries-common.mixins.json:ServerLevelMixin from mod supplementaries,pl:mixin:A,pl:connector_pre_launch:A}
+	at net.minecraft.server.level.ServerLevel.m_8793_(ServerLevel.java:291) ~[server-1.20.1-20230612.114412-srg.jar%23375!/:?] {re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:cupboard.mixins.json:ServerAddEntityMixin from mod cupboard,pl:mixin:APP:modernfix-common.mixins.json:bugfix.chunk_deadlock.ServerLevelMixin from mod modernfix,pl:mixin:APP:modernfix-common.mixins.json:perf.faster_structure_location.ServerLevelMixin from mod modernfix,pl:mixin:APP:modernfix-common.mixins.json:perf.cache_strongholds.ServerLevelMixin from mod modernfix,pl:mixin:APP:botania_xplat.mixins.json:ServerLevelMixin from mod botania,pl:mixin:APP:majruszlibrary-common.mixins.json:IMixinServerLevel from mod majruszlibrary,pl:mixin:APP:majruszlibrary-common.mixins.json:MixinServerLevel from mod majruszlibrary,pl:mixin:APP:glitchcore.mixins.json:MixinServerLevel from mod glitchcore,pl:mixin:APP:sereneseasons.mixins.json:MixinServerLevel from mod sereneseasons,pl:mixin:APP:imm_ptl.mixins.json:common.MixinServerLevel from mod immersive_portals,pl:mixin:APP:imm_ptl_peripheral.mixins.json:common.alternate_dimension.MixinServerLevel_ModifySeed from mod immersive_portals,pl:mixin:APP:citadel.mixins.json:ServerLevelMixin from mod citadel,pl:mixin:APP:fabric-data-attachment-api-v1.mixins.json:ServerWorldMixin from mod fabric_data_attachment_api_v1,pl:mixin:APP:fabric-api-lookup-api-v1.mixins.json:ServerWorldMixin from mod fabric_api_lookup_api_v1,pl:mixin:APP:multidim.mixins.json:ServerWorldMixin from mod amblekit,pl:mixin:APP:fabric-lifecycle-events-v1.mixins.json:ServerWorldMixin from mod fabric_lifecycle_events_v1,pl:mixin:APP:blueprint.mixins.json:ServerLevelMixin from mod blueprint,pl:mixin:APP:moonlight-common.mixins.json:ServerLevelMixin from mod moonlight,pl:mixin:APP:supplementaries-common.mixins.json:ServerLevelMixin from mod supplementaries,pl:mixin:A,pl:connector_pre_launch:A}
+	at net.minecraft.server.MinecraftServer.m_5703_(MinecraftServer.java:893) ~[server-1.20.1-20230612.114412-srg.jar%23375!/:?] {re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:computing_frames,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:modernfix-common.mixins.json:perf.fix_loop_spin_waiting.MinecraftServerMixin from mod modernfix,pl:mixin:APP:modernfix-common.mixins.json:core.MinecraftServerMixin from mod modernfix,pl:mixin:APP:modernfix-common.mixins.json:perf.dedicated_reload_executor.MinecraftServerMixin from mod modernfix,pl:mixin:APP:modernfix-forge.mixins.json:core.MinecraftServerMixin from mod modernfix,pl:mixin:APP:balm.mixins.json:MinecraftServerMixin from mod balm,pl:mixin:APP:majruszlibrary-common.mixins.json:MixinMinecraftServer from mod majruszlibrary,pl:mixin:APP:imm_ptl.mixins.json:common.MixinMinecraftServer from mod immersive_portals,pl:mixin:APP:imm_ptl.mixins.json:common.portal_generation.MixinMinecraftServer_P from mod immersive_portals,pl:mixin:APP:imm_ptl_peripheral.mixins.json:common.dim_stack.MixinMinecraftServer_DimStack from mod immersive_portals,pl:mixin:APP:q_misc_util.mixins.json:MixinMinecraftServer_Misc from mod immersive_portals,pl:mixin:APP:q_misc_util.mixins.json:dimension.MixinMinecraftServer_D from mod immersive_portals,pl:mixin:APP:fabric-message-api-v1.mixins.json:MinecraftServerMixin from mod fabric_message_api_v1,pl:mixin:APP:citadel.mixins.json:MinecraftServerMixin from mod citadel,pl:mixin:APP:connectormod.mixins.json:registries.MinecraftServerMixin from mod connectormod,pl:mixin:APP:multidim.mixins.json:MinecraftServerMixin from mod amblekit,pl:mixin:APP:fabric-lifecycle-events-v1.mixins.json:MinecraftServerMixin from mod fabric_lifecycle_events_v1,pl:mixin:APP:fabric-resource-loader-v0.mixins.json:MinecraftServerMixin from mod fabric_resource_loader_v0,pl:mixin:APP:ichunutil.mixins.json:MinecraftServerAccessorMixin from mod ichunutil,pl:mixin:APP:blueprint.mixins.json:MinecraftServerMixin from mod blueprint,pl:mixin:APP:amblekit.mixins.json:fix.WorldCacheResetFix from mod amblekit,pl:mixin:A,pl:connector_pre_launch:A}
+	at net.minecraft.server.dedicated.DedicatedServer.m_5703_(DedicatedServer.java:283) ~[server-1.20.1-20230612.114412-srg.jar%23375!/:?] {re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:computing_frames,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:majruszlibrary-common.mixins.json:MixinDedicatedServer from mod majruszlibrary,pl:mixin:APP:imm_ptl.mixins.json:common.MixinDedicatedServer from mod immersive_portals,pl:mixin:APP:blueprint.mixins.json:DedicatedServerMixin from mod blueprint,pl:mixin:A,pl:connector_pre_launch:A}
+	at net.minecraft.server.MinecraftServer.m_5705_(MinecraftServer.java:814) ~[server-1.20.1-20230612.114412-srg.jar%23375!/:?] {re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:computing_frames,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:modernfix-common.mixins.json:perf.fix_loop_spin_waiting.MinecraftServerMixin from mod modernfix,pl:mixin:APP:modernfix-common.mixins.json:core.MinecraftServerMixin from mod modernfix,pl:mixin:APP:modernfix-common.mixins.json:perf.dedicated_reload_executor.MinecraftServerMixin from mod modernfix,pl:mixin:APP:modernfix-forge.mixins.json:core.MinecraftServerMixin from mod modernfix,pl:mixin:APP:balm.mixins.json:MinecraftServerMixin from mod balm,pl:mixin:APP:majruszlibrary-common.mixins.json:MixinMinecraftServer from mod majruszlibrary,pl:mixin:APP:imm_ptl.mixins.json:common.MixinMinecraftServer from mod immersive_portals,pl:mixin:APP:imm_ptl.mixins.json:common.portal_generation.MixinMinecraftServer_P from mod immersive_portals,pl:mixin:APP:imm_ptl_peripheral.mixins.json:common.dim_stack.MixinMinecraftServer_DimStack from mod immersive_portals,pl:mixin:APP:q_misc_util.mixins.json:MixinMinecraftServer_Misc from mod immersive_portals,pl:mixin:APP:q_misc_util.mixins.json:dimension.MixinMinecraftServer_D from mod immersive_portals,pl:mixin:APP:fabric-message-api-v1.mixins.json:MinecraftServerMixin from mod fabric_message_api_v1,pl:mixin:APP:citadel.mixins.json:MinecraftServerMixin from mod citadel,pl:mixin:APP:connectormod.mixins.json:registries.MinecraftServerMixin from mod connectormod,pl:mixin:APP:multidim.mixins.json:MinecraftServerMixin from mod amblekit,pl:mixin:APP:fabric-lifecycle-events-v1.mixins.json:MinecraftServerMixin from mod fabric_lifecycle_events_v1,pl:mixin:APP:fabric-resource-loader-v0.mixins.json:MinecraftServerMixin from mod fabric_resource_loader_v0,pl:mixin:APP:ichunutil.mixins.json:MinecraftServerAccessorMixin from mod ichunutil,pl:mixin:APP:blueprint.mixins.json:MinecraftServerMixin from mod blueprint,pl:mixin:APP:amblekit.mixins.json:fix.WorldCacheResetFix from mod amblekit,pl:mixin:A,pl:connector_pre_launch:A}
+	at net.minecraft.server.MinecraftServer.m_130011_(MinecraftServer.java:661) ~[server-1.20.1-20230612.114412-srg.jar%23375!/:?] {re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:computing_frames,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:modernfix-common.mixins.json:perf.fix_loop_spin_waiting.MinecraftServerMixin from mod modernfix,pl:mixin:APP:modernfix-common.mixins.json:core.MinecraftServerMixin from mod modernfix,pl:mixin:APP:modernfix-common.mixins.json:perf.dedicated_reload_executor.MinecraftServerMixin from mod modernfix,pl:mixin:APP:modernfix-forge.mixins.json:core.MinecraftServerMixin from mod modernfix,pl:mixin:APP:balm.mixins.json:MinecraftServerMixin from mod balm,pl:mixin:APP:majruszlibrary-common.mixins.json:MixinMinecraftServer from mod majruszlibrary,pl:mixin:APP:imm_ptl.mixins.json:common.MixinMinecraftServer from mod immersive_portals,pl:mixin:APP:imm_ptl.mixins.json:common.portal_generation.MixinMinecraftServer_P from mod immersive_portals,pl:mixin:APP:imm_ptl_peripheral.mixins.json:common.dim_stack.MixinMinecraftServer_DimStack from mod immersive_portals,pl:mixin:APP:q_misc_util.mixins.json:MixinMinecraftServer_Misc from mod immersive_portals,pl:mixin:APP:q_misc_util.mixins.json:dimension.MixinMinecraftServer_D from mod immersive_portals,pl:mixin:APP:fabric-message-api-v1.mixins.json:MinecraftServerMixin from mod fabric_message_api_v1,pl:mixin:APP:citadel.mixins.json:MinecraftServerMixin from mod citadel,pl:mixin:APP:connectormod.mixins.json:registries.MinecraftServerMixin from mod connectormod,pl:mixin:APP:multidim.mixins.json:MinecraftServerMixin from mod amblekit,pl:mixin:APP:fabric-lifecycle-events-v1.mixins.json:MinecraftServerMixin from mod fabric_lifecycle_events_v1,pl:mixin:APP:fabric-resource-loader-v0.mixins.json:MinecraftServerMixin from mod fabric_resource_loader_v0,pl:mixin:APP:ichunutil.mixins.json:MinecraftServerAccessorMixin from mod ichunutil,pl:mixin:APP:blueprint.mixins.json:MinecraftServerMixin from mod blueprint,pl:mixin:APP:amblekit.mixins.json:fix.WorldCacheResetFix from mod amblekit,pl:mixin:A,pl:connector_pre_launch:A}
+	at net.minecraft.server.MinecraftServer.m_206580_(MinecraftServer.java:251) ~[server-1.20.1-20230612.114412-srg.jar%23375!/:?] {re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:computing_frames,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:modernfix-common.mixins.json:perf.fix_loop_spin_waiting.MinecraftServerMixin from mod modernfix,pl:mixin:APP:modernfix-common.mixins.json:core.MinecraftServerMixin from mod modernfix,pl:mixin:APP:modernfix-common.mixins.json:perf.dedicated_reload_executor.MinecraftServerMixin from mod modernfix,pl:mixin:APP:modernfix-forge.mixins.json:core.MinecraftServerMixin from mod modernfix,pl:mixin:APP:balm.mixins.json:MinecraftServerMixin from mod balm,pl:mixin:APP:majruszlibrary-common.mixins.json:MixinMinecraftServer from mod majruszlibrary,pl:mixin:APP:imm_ptl.mixins.json:common.MixinMinecraftServer from mod immersive_portals,pl:mixin:APP:imm_ptl.mixins.json:common.portal_generation.MixinMinecraftServer_P from mod immersive_portals,pl:mixin:APP:imm_ptl_peripheral.mixins.json:common.dim_stack.MixinMinecraftServer_DimStack from mod immersive_portals,pl:mixin:APP:q_misc_util.mixins.json:MixinMinecraftServer_Misc from mod immersive_portals,pl:mixin:APP:q_misc_util.mixins.json:dimension.MixinMinecraftServer_D from mod immersive_portals,pl:mixin:APP:fabric-message-api-v1.mixins.json:MinecraftServerMixin from mod fabric_message_api_v1,pl:mixin:APP:citadel.mixins.json:MinecraftServerMixin from mod citadel,pl:mixin:APP:connectormod.mixins.json:registries.MinecraftServerMixin from mod connectormod,pl:mixin:APP:multidim.mixins.json:MinecraftServerMixin from mod amblekit,pl:mixin:APP:fabric-lifecycle-events-v1.mixins.json:MinecraftServerMixin from mod fabric_lifecycle_events_v1,pl:mixin:APP:fabric-resource-loader-v0.mixins.json:MinecraftServerMixin from mod fabric_resource_loader_v0,pl:mixin:APP:ichunutil.mixins.json:MinecraftServerAccessorMixin from mod ichunutil,pl:mixin:APP:blueprint.mixins.json:MinecraftServerMixin from mod blueprint,pl:mixin:APP:amblekit.mixins.json:fix.WorldCacheResetFix from mod amblekit,pl:mixin:A,pl:connector_pre_launch:A}
+	at net.minecraft.server.MinecraftServer$$Lambda$27467/0x000070a29f05c000.run(Unknown Source) ~[?:?] {}
+	at java.lang.Thread.run(Thread.java:840) ~[?:?] {re:mixin}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server Watchdog
+Suspected Mods: NONE
+Stacktrace:
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258) ~[?:?] {}
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510) ~[?:?] {}
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[?:?] {}
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:575) ~[?:?] {}
+	at java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260) ~[?:?] {}
+	at java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:616) ~[?:?] {}
+	at java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:622) ~[?:?] {}
+	at java.util.stream.ReferencePipeline.toList(ReferencePipeline.java:627) ~[?:?] {}
+	at net.minecraft.commands.arguments.selector.EntitySelector.m_121160_(EntitySelector.java:112) ~[server-1.20.1-20230612.114412-srg.jar%23375!/:?] {re:classloading,pl:accesstransformer:B,pl:connector_pre_launch:A}
+	at net.minecraft.commands.arguments.EntityArgument.m_91467_(EntityArgument.java:65) ~[server-1.20.1-20230612.114412-srg.jar%23375!/:?] {re:classloading,pl:connector_pre_launch:A}
+	at net.minecraft.server.commands.ExecuteCommand.m_137230_(ExecuteCommand.java:572) ~[server-1.20.1-20230612.114412-srg.jar%23375!/:?] {re:classloading,pl:connector_pre_launch:A}
+	at net.minecraft.server.commands.ExecuteCommand$$Lambda$25424/0x000070a29eea4890.apply(Unknown Source) ~[?:?] {}
+	at com.mojang.brigadier.CommandDispatcher.execute(CommandDispatcher.java:242) ~[brigadier-1.1.8.jar%2376!/:?] {}
+	at net.minecraft.commands.CommandFunction$CommandEntry.m_164875_(CommandFunction.java:96) ~[server-1.20.1-20230612.114412-srg.jar%23375!/:?] {re:classloading,pl:connector_pre_launch:A}
+	at net.minecraft.commands.CommandFunction$CommandEntry.m_142134_(CommandFunction.java:90) ~[server-1.20.1-20230612.114412-srg.jar%23375!/:?] {re:classloading,pl:connector_pre_launch:A}
+	at net.minecraft.server.ServerFunctionManager$QueuedCommand.m_179985_(ServerFunctionManager.java:135) ~[server-1.20.1-20230612.114412-srg.jar%23375!/:?] {re:classloading,pl:connector_pre_launch:A}
+	at net.minecraft.server.ServerFunctionManager$ExecutionContext.m_179977_(ServerFunctionManager.java:210) ~[server-1.20.1-20230612.114412-srg.jar%23375!/:?] {re:classloading,pl:connector_pre_launch:A}
+	at net.minecraft.server.ServerFunctionManager.m_179960_(ServerFunctionManager.java:85) ~[server-1.20.1-20230612.114412-srg.jar%23375!/:?] {re:mixin,pl:connector_pre_launch:A,re:classloading,pl:mixin:APP:modernfix-common.mixins.json:feature.mcfunction_profiling.ServerFunctionManagerMixin from mod modernfix,pl:mixin:A,pl:connector_pre_launch:A}
+	at net.minecraft.server.ServerFunctionManager.m_136112_(ServerFunctionManager.java:69) ~[server-1.20.1-20230612.114412-srg.jar%23375!/:?] {re:mixin,pl:connector_pre_launch:A,re:classloading,pl:mixin:APP:modernfix-common.mixins.json:feature.mcfunction_profiling.ServerFunctionManagerMixin from mod modernfix,pl:mixin:A,pl:connector_pre_launch:A}
+	at net.minecraft.world.level.timers.FunctionCallback.m_82175_(FunctionCallback.java:18) ~[server-1.20.1-20230612.114412-srg.jar%23375!/:?] {re:classloading,pl:connector_pre_launch:A}
+	at net.minecraft.world.level.timers.FunctionCallback$$Lambda$28923/0x000070a29f2ba820.accept(Unknown Source) ~[?:?] {}
+	at java.util.Optional.ifPresent(Optional.java:178) ~[?:?] {re:mixin}
+	at net.minecraft.world.level.timers.FunctionCallback.m_5821_(FunctionCallback.java:18) ~[server-1.20.1-20230612.114412-srg.jar%23375!/:?] {re:classloading,pl:connector_pre_launch:A}
+	at net.minecraft.world.level.timers.FunctionCallback.m_5821_(FunctionCallback.java:8) ~[server-1.20.1-20230612.114412-srg.jar%23375!/:?] {re:classloading,pl:connector_pre_launch:A}
+	at net.minecraft.world.level.timers.TimerQueue.m_82256_(TimerQueue.java:84) ~[server-1.20.1-20230612.114412-srg.jar%23375!/:?] {re:classloading,pl:connector_pre_launch:A}
+	at net.minecraft.server.level.ServerLevel.m_8809_(ServerLevel.java:367) ~[server-1.20.1-20230612.114412-srg.jar%23375!/:?] {re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:cupboard.mixins.json:ServerAddEntityMixin from mod cupboard,pl:mixin:APP:modernfix-common.mixins.json:bugfix.chunk_deadlock.ServerLevelMixin from mod modernfix,pl:mixin:APP:modernfix-common.mixins.json:perf.faster_structure_location.ServerLevelMixin from mod modernfix,pl:mixin:APP:modernfix-common.mixins.json:perf.cache_strongholds.ServerLevelMixin from mod modernfix,pl:mixin:APP:botania_xplat.mixins.json:ServerLevelMixin from mod botania,pl:mixin:APP:majruszlibrary-common.mixins.json:IMixinServerLevel from mod majruszlibrary,pl:mixin:APP:majruszlibrary-common.mixins.json:MixinServerLevel from mod majruszlibrary,pl:mixin:APP:glitchcore.mixins.json:MixinServerLevel from mod glitchcore,pl:mixin:APP:sereneseasons.mixins.json:MixinServerLevel from mod sereneseasons,pl:mixin:APP:imm_ptl.mixins.json:common.MixinServerLevel from mod immersive_portals,pl:mixin:APP:imm_ptl_peripheral.mixins.json:common.alternate_dimension.MixinServerLevel_ModifySeed from mod immersive_portals,pl:mixin:APP:citadel.mixins.json:ServerLevelMixin from mod citadel,pl:mixin:APP:fabric-data-attachment-api-v1.mixins.json:ServerWorldMixin from mod fabric_data_attachment_api_v1,pl:mixin:APP:fabric-api-lookup-api-v1.mixins.json:ServerWorldMixin from mod fabric_api_lookup_api_v1,pl:mixin:APP:multidim.mixins.json:ServerWorldMixin from mod amblekit,pl:mixin:APP:fabric-lifecycle-events-v1.mixins.json:ServerWorldMixin from mod fabric_lifecycle_events_v1,pl:mixin:APP:blueprint.mixins.json:ServerLevelMixin from mod blueprint,pl:mixin:APP:moonlight-common.mixins.json:ServerLevelMixin from mod moonlight,pl:mixin:APP:supplementaries-common.mixins.json:ServerLevelMixin from mod supplementaries,pl:mixin:A,pl:connector_pre_launch:A}
+	at net.minecraft.server.level.ServerLevel.m_8793_(ServerLevel.java:291) ~[server-1.20.1-20230612.114412-srg.jar%23375!/:?] {re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:cupboard.mixins.json:ServerAddEntityMixin from mod cupboard,pl:mixin:APP:modernfix-common.mixins.json:bugfix.chunk_deadlock.ServerLevelMixin from mod modernfix,pl:mixin:APP:modernfix-common.mixins.json:perf.faster_structure_location.ServerLevelMixin from mod modernfix,pl:mixin:APP:modernfix-common.mixins.json:perf.cache_strongholds.ServerLevelMixin from mod modernfix,pl:mixin:APP:botania_xplat.mixins.json:ServerLevelMixin from mod botania,pl:mixin:APP:majruszlibrary-common.mixins.json:IMixinServerLevel from mod majruszlibrary,pl:mixin:APP:majruszlibrary-common.mixins.json:MixinServerLevel from mod majruszlibrary,pl:mixin:APP:glitchcore.mixins.json:MixinServerLevel from mod glitchcore,pl:mixin:APP:sereneseasons.mixins.json:MixinServerLevel from mod sereneseasons,pl:mixin:APP:imm_ptl.mixins.json:common.MixinServerLevel from mod immersive_portals,pl:mixin:APP:imm_ptl_peripheral.mixins.json:common.alternate_dimension.MixinServerLevel_ModifySeed from mod immersive_portals,pl:mixin:APP:citadel.mixins.json:ServerLevelMixin from mod citadel,pl:mixin:APP:fabric-data-attachment-api-v1.mixins.json:ServerWorldMixin from mod fabric_data_attachment_api_v1,pl:mixin:APP:fabric-api-lookup-api-v1.mixins.json:ServerWorldMixin from mod fabric_api_lookup_api_v1,pl:mixin:APP:multidim.mixins.json:ServerWorldMixin from mod amblekit,pl:mixin:APP:fabric-lifecycle-events-v1.mixins.json:ServerWorldMixin from mod fabric_lifecycle_events_v1,pl:mixin:APP:blueprint.mixins.json:ServerLevelMixin from mod blueprint,pl:mixin:APP:moonlight-common.mixins.json:ServerLevelMixin from mod moonlight,pl:mixin:APP:supplementaries-common.mixins.json:ServerLevelMixin from mod supplementaries,pl:mixin:A,pl:connector_pre_launch:A}
+	at net.minecraft.server.MinecraftServer.m_5703_(MinecraftServer.java:893) ~[server-1.20.1-20230612.114412-srg.jar%23375!/:?] {re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:computing_frames,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:modernfix-common.mixins.json:perf.fix_loop_spin_waiting.MinecraftServerMixin from mod modernfix,pl:mixin:APP:modernfix-common.mixins.json:core.MinecraftServerMixin from mod modernfix,pl:mixin:APP:modernfix-common.mixins.json:perf.dedicated_reload_executor.MinecraftServerMixin from mod modernfix,pl:mixin:APP:modernfix-forge.mixins.json:core.MinecraftServerMixin from mod modernfix,pl:mixin:APP:balm.mixins.json:MinecraftServerMixin from mod balm,pl:mixin:APP:majruszlibrary-common.mixins.json:MixinMinecraftServer from mod majruszlibrary,pl:mixin:APP:imm_ptl.mixins.json:common.MixinMinecraftServer from mod immersive_portals,pl:mixin:APP:imm_ptl.mixins.json:common.portal_generation.MixinMinecraftServer_P from mod immersive_portals,pl:mixin:APP:imm_ptl_peripheral.mixins.json:common.dim_stack.MixinMinecraftServer_DimStack from mod immersive_portals,pl:mixin:APP:q_misc_util.mixins.json:MixinMinecraftServer_Misc from mod immersive_portals,pl:mixin:APP:q_misc_util.mixins.json:dimension.MixinMinecraftServer_D from mod immersive_portals,pl:mixin:APP:fabric-message-api-v1.mixins.json:MinecraftServerMixin from mod fabric_message_api_v1,pl:mixin:APP:citadel.mixins.json:MinecraftServerMixin from mod citadel,pl:mixin:APP:connectormod.mixins.json:registries.MinecraftServerMixin from mod connectormod,pl:mixin:APP:multidim.mixins.json:MinecraftServerMixin from mod amblekit,pl:mixin:APP:fabric-lifecycle-events-v1.mixins.json:MinecraftServerMixin from mod fabric_lifecycle_events_v1,pl:mixin:APP:fabric-resource-loader-v0.mixins.json:MinecraftServerMixin from mod fabric_resource_loader_v0,pl:mixin:APP:ichunutil.mixins.json:MinecraftServerAccessorMixin from mod ichunutil,pl:mixin:APP:blueprint.mixins.json:MinecraftServerMixin from mod blueprint,pl:mixin:APP:amblekit.mixins.json:fix.WorldCacheResetFix from mod amblekit,pl:mixin:A,pl:connector_pre_launch:A}
+	at net.minecraft.server.dedicated.DedicatedServer.m_5703_(DedicatedServer.java:283) ~[server-1.20.1-20230612.114412-srg.jar%23375!/:?] {re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:computing_frames,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:majruszlibrary-common.mixins.json:MixinDedicatedServer from mod majruszlibrary,pl:mixin:APP:imm_ptl.mixins.json:common.MixinDedicatedServer from mod immersive_portals,pl:mixin:APP:blueprint.mixins.json:DedicatedServerMixin from mod blueprint,pl:mixin:A,pl:connector_pre_launch:A}
+	at net.minecraft.server.MinecraftServer.m_5705_(MinecraftServer.java:814) ~[server-1.20.1-20230612.114412-srg.jar%23375!/:?] {re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:computing_frames,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:modernfix-common.mixins.json:perf.fix_loop_spin_waiting.MinecraftServerMixin from mod modernfix,pl:mixin:APP:modernfix-common.mixins.json:core.MinecraftServerMixin from mod modernfix,pl:mixin:APP:modernfix-common.mixins.json:perf.dedicated_reload_executor.MinecraftServerMixin from mod modernfix,pl:mixin:APP:modernfix-forge.mixins.json:core.MinecraftServerMixin from mod modernfix,pl:mixin:APP:balm.mixins.json:MinecraftServerMixin from mod balm,pl:mixin:APP:majruszlibrary-common.mixins.json:MixinMinecraftServer from mod majruszlibrary,pl:mixin:APP:imm_ptl.mixins.json:common.MixinMinecraftServer from mod immersive_portals,pl:mixin:APP:imm_ptl.mixins.json:common.portal_generation.MixinMinecraftServer_P from mod immersive_portals,pl:mixin:APP:imm_ptl_peripheral.mixins.json:common.dim_stack.MixinMinecraftServer_DimStack from mod immersive_portals,pl:mixin:APP:q_misc_util.mixins.json:MixinMinecraftServer_Misc from mod immersive_portals,pl:mixin:APP:q_misc_util.mixins.json:dimension.MixinMinecraftServer_D from mod immersive_portals,pl:mixin:APP:fabric-message-api-v1.mixins.json:MinecraftServerMixin from mod fabric_message_api_v1,pl:mixin:APP:citadel.mixins.json:MinecraftServerMixin from mod citadel,pl:mixin:APP:connectormod.mixins.json:registries.MinecraftServerMixin from mod connectormod,pl:mixin:APP:multidim.mixins.json:MinecraftServerMixin from mod amblekit,pl:mixin:APP:fabric-lifecycle-events-v1.mixins.json:MinecraftServerMixin from mod fabric_lifecycle_events_v1,pl:mixin:APP:fabric-resource-loader-v0.mixins.json:MinecraftServerMixin from mod fabric_resource_loader_v0,pl:mixin:APP:ichunutil.mixins.json:MinecraftServerAccessorMixin from mod ichunutil,pl:mixin:APP:blueprint.mixins.json:MinecraftServerMixin from mod blueprint,pl:mixin:APP:amblekit.mixins.json:fix.WorldCacheResetFix from mod amblekit,pl:mixin:A,pl:connector_pre_launch:A}
+	at net.minecraft.server.MinecraftServer.m_130011_(MinecraftServer.java:661) ~[server-1.20.1-20230612.114412-srg.jar%23375!/:?] {re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:computing_frames,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:modernfix-common.mixins.json:perf.fix_loop_spin_waiting.MinecraftServerMixin from mod modernfix,pl:mixin:APP:modernfix-common.mixins.json:core.MinecraftServerMixin from mod modernfix,pl:mixin:APP:modernfix-common.mixins.json:perf.dedicated_reload_executor.MinecraftServerMixin from mod modernfix,pl:mixin:APP:modernfix-forge.mixins.json:core.MinecraftServerMixin from mod modernfix,pl:mixin:APP:balm.mixins.json:MinecraftServerMixin from mod balm,pl:mixin:APP:majruszlibrary-common.mixins.json:MixinMinecraftServer from mod majruszlibrary,pl:mixin:APP:imm_ptl.mixins.json:common.MixinMinecraftServer from mod immersive_portals,pl:mixin:APP:imm_ptl.mixins.json:common.portal_generation.MixinMinecraftServer_P from mod immersive_portals,pl:mixin:APP:imm_ptl_peripheral.mixins.json:common.dim_stack.MixinMinecraftServer_DimStack from mod immersive_portals,pl:mixin:APP:q_misc_util.mixins.json:MixinMinecraftServer_Misc from mod immersive_portals,pl:mixin:APP:q_misc_util.mixins.json:dimension.MixinMinecraftServer_D from mod immersive_portals,pl:mixin:APP:fabric-message-api-v1.mixins.json:MinecraftServerMixin from mod fabric_message_api_v1,pl:mixin:APP:citadel.mixins.json:MinecraftServerMixin from mod citadel,pl:mixin:APP:connectormod.mixins.json:registries.MinecraftServerMixin from mod connectormod,pl:mixin:APP:multidim.mixins.json:MinecraftServerMixin from mod amblekit,pl:mixin:APP:fabric-lifecycle-events-v1.mixins.json:MinecraftServerMixin from mod fabric_lifecycle_events_v1,pl:mixin:APP:fabric-resource-loader-v0.mixins.json:MinecraftServerMixin from mod fabric_resource_loader_v0,pl:mixin:APP:ichunutil.mixins.json:MinecraftServerAccessorMixin from mod ichunutil,pl:mixin:APP:blueprint.mixins.json:MinecraftServerMixin from mod blueprint,pl:mixin:APP:amblekit.mixins.json:fix.WorldCacheResetFix from mod amblekit,pl:mixin:A,pl:connector_pre_launch:A}
+	at net.minecraft.server.MinecraftServer.m_206580_(MinecraftServer.java:251) ~[server-1.20.1-20230612.114412-srg.jar%23375!/:?] {re:mixin,pl:accesstransformer:B,pl:connector_pre_launch:A,re:computing_frames,pl:accesstransformer:B,pl:connector_pre_launch:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:modernfix-common.mixins.json:perf.fix_loop_spin_waiting.MinecraftServerMixin from mod modernfix,pl:mixin:APP:modernfix-common.mixins.json:core.MinecraftServerMixin from mod modernfix,pl:mixin:APP:modernfix-common.mixins.json:perf.dedicated_reload_executor.MinecraftServerMixin from mod modernfix,pl:mixin:APP:modernfix-forge.mixins.json:core.MinecraftServerMixin from mod modernfix,pl:mixin:APP:balm.mixins.json:MinecraftServerMixin from mod balm,pl:mixin:APP:majruszlibrary-common.mixins.json:MixinMinecraftServer from mod majruszlibrary,pl:mixin:APP:imm_ptl.mixins.json:common.MixinMinecraftServer from mod immersive_portals,pl:mixin:APP:imm_ptl.mixins.json:common.portal_generation.MixinMinecraftServer_P from mod immersive_portals,pl:mixin:APP:imm_ptl_peripheral.mixins.json:common.dim_stack.MixinMinecraftServer_DimStack from mod immersive_portals,pl:mixin:APP:q_misc_util.mixins.json:MixinMinecraftServer_Misc from mod immersive_portals,pl:mixin:APP:q_misc_util.mixins.json:dimension.MixinMinecraftServer_D from mod immersive_portals,pl:mixin:APP:fabric-message-api-v1.mixins.json:MinecraftServerMixin from mod fabric_message_api_v1,pl:mixin:APP:citadel.mixins.json:MinecraftServerMixin from mod citadel,pl:mixin:APP:connectormod.mixins.json:registries.MinecraftServerMixin from mod connectormod,pl:mixin:APP:multidim.mixins.json:MinecraftServerMixin from mod amblekit,pl:mixin:APP:fabric-lifecycle-events-v1.mixins.json:MinecraftServerMixin from mod fabric_lifecycle_events_v1,pl:mixin:APP:fabric-resource-loader-v0.mixins.json:MinecraftServerMixin from mod fabric_resource_loader_v0,pl:mixin:APP:ichunutil.mixins.json:MinecraftServerAccessorMixin from mod ichunutil,pl:mixin:APP:blueprint.mixins.json:MinecraftServerMixin from mod blueprint,pl:mixin:APP:amblekit.mixins.json:fix.WorldCacheResetFix from mod amblekit,pl:mixin:A,pl:connector_pre_launch:A}
+-- Thread Dump --
+Details:
+	Threads: "Reference Handler" daemon prio=10 Id=2 RUNNABLE
+	at java.base@17.0.18/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
+	at java.base@17.0.18/java.lang.ref.Reference.processPendingReferences(Reference.java:253)
+	at java.base@17.0.18/java.lang.ref.Reference$ReferenceHandler.run(Reference.java:215)
+
+
+"Finalizer" daemon prio=8 Id=3 WAITING on java.lang.ref.ReferenceQueue$Lock@77e7438f
+	at java.base@17.0.18/java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@77e7438f
+	at java.base@17.0.18/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+	at java.base@17.0.18/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:176)
+	at java.base@17.0.18/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:172)
+
+
+"Signal Dispatcher" daemon prio=9 Id=4 RUNNABLE
+
+
+"Common-Cleaner" daemon prio=8 Id=11 TIMED_WAITING on java.lang.ref.ReferenceQueue$Lock@7920a303
+	at java.base@17.0.18/java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@7920a303
+	at java.base@17.0.18/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+	at java.base@17.0.18/jdk.internal.ref.CleanerImpl.run(CleanerImpl.java:140)
+	at java.base@17.0.18/java.lang.Thread.run(Thread.java:840)
+	at java.base@17.0.18/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:162)
+
+
+"Notification Thread" daemon prio=9 Id=12 RUNNABLE
+
+
+"Thread-1" daemon prio=5 Id=22 TIMED_WAITING
+	at java.base@17.0.18/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@17.0.18/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:376)
+	at TRANSFORMER/modernfix@5.24.4+mc1.20.1/org.embeddedt.modernfix.forge.config.NightConfigWatchThrottler$1$1.iterator(NightConfigWatchThrottler.java:47)
+	at MC-BOOTSTRAP/com.electronwill.nightconfig.core@3.6.4/com.electronwill.nightconfig.core.file.FileWatcher$WatcherThread.run(FileWatcher.java:162)
+
+
+"JNA Cleaner" daemon prio=5 Id=23 WAITING on java.lang.ref.ReferenceQueue$Lock@7d1f28ff
+	at java.base@17.0.18/java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@7d1f28ff
+	at java.base@17.0.18/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+	at java.base@17.0.18/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:176)
+	at MC-BOOTSTRAP/com.sun.jna@5.12.1/com.sun.jna.internal.Cleaner$1.run(Cleaner.java:58)
+
+
+"Timer hack thread" daemon prio=5 Id=24 TIMED_WAITING
+	at java.base@17.0.18/java.lang.Thread.sleep(Native Method)
+	at TRANSFORMER/minecraft@1.20.1/net.minecraft.Util$9.run(Util.java:672)
+
+
+"FileSystemWatchService" daemon prio=5 Id=34 RUNNABLE (in native)
+	at java.base@17.0.18/sun.nio.fs.LinuxWatchService.poll(Native Method)
+	at java.base@17.0.18/sun.nio.fs.LinuxWatchService$Poller.run(LinuxWatchService.java:314)
+	at java.base@17.0.18/java.lang.Thread.run(Thread.java:840)
+
+
+"Thread-5" daemon prio=5 Id=35 TIMED_WAITING
+	at java.base@17.0.18/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@17.0.18/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:376)
+	at MC-BOOTSTRAP/com.electronwill.nightconfig.core@3.6.4/com.electronwill.nightconfig.core.file.FileWatcher$WatcherThread.run(FileWatcher.java:190)
+
+
+"FileSystemWatchService" daemon prio=5 Id=36 RUNNABLE (in native)
+	at java.base@17.0.18/sun.nio.fs.LinuxWatchService.poll(Native Method)
+	at java.base@17.0.18/sun.nio.fs.LinuxWatchService$Poller.run(LinuxWatchService.java:314)
+	at java.base@17.0.18/java.lang.Thread.run(Thread.java:840)
+
+
+"DFU cleaning thread" daemon prio=1 Id=40 TIMED_WAITING
+	at java.base@17.0.18/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@17.0.18/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:376)
+	at TRANSFORMER/modernfix@5.24.4+mc1.20.1/org.embeddedt.modernfix.dfu.DFUBlaster$CleanerThread.run(DFUBlaster.java:61)
+
+
+"FileSystemWatchService" daemon prio=5 Id=41 RUNNABLE (in native)
+	at java.base@17.0.18/sun.nio.fs.LinuxWatchService.poll(Native Method)
+	at java.base@17.0.18/sun.nio.fs.LinuxWatchService$Poller.run(LinuxWatchService.java:314)
+	at java.base@17.0.18/java.lang.Thread.run(Thread.java:840)
+
+
+"FileSystemWatchService" daemon prio=5 Id=42 RUNNABLE (in native)
+	at java.base@17.0.18/sun.nio.fs.LinuxWatchService.poll(Native Method)
+	at java.base@17.0.18/sun.nio.fs.LinuxWatchService$Poller.run(LinuxWatchService.java:314)
+	at java.base@17.0.18/java.lang.Thread.run(Thread.java:840)
+
+
+"FileSystemWatchService" daemon prio=5 Id=43 RUNNABLE (in native)
+	at java.base@17.0.18/sun.nio.fs.LinuxWatchService.poll(Native Method)
+	at java.base@17.0.18/sun.nio.fs.LinuxWatchService$Poller.run(LinuxWatchService.java:314)
+	at java.base@17.0.18/java.lang.Thread.run(Thread.java:840)
+
+
+"FileSystemWatchService" daemon prio=5 Id=44 RUNNABLE (in native)
+	at java.base@17.0.18/sun.nio.fs.LinuxWatchService.poll(Native Method)
+	at java.base@17.0.18/sun.nio.fs.LinuxWatchService$Poller.run(LinuxWatchService.java:314)
+	at java.base@17.0.18/java.lang.Thread.run(Thread.java:840)
+
+
+"FileSystemWatchService" daemon prio=5 Id=45 RUNNABLE (in native)
+	at java.base@17.0.18/sun.nio.fs.LinuxWatchService.poll(Native Method)
+	at java.base@17.0.18/sun.nio.fs.LinuxWatchService$Poller.run(LinuxWatchService.java:314)
+	at java.base@17.0.18/java.lang.Thread.run(Thread.java:840)
+
+
+"Ingredient reference clearing thread" daemon prio=7 Id=46 WAITING on java.lang.ref.ReferenceQueue$Lock@381da938
+	at java.base@17.0.18/java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@381da938
+	at java.base@17.0.18/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+	at java.base@17.0.18/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:176)
+	at TRANSFORMER/modernfix@5.24.4+mc1.20.1/org.embeddedt.modernfix.forge.recipe.IngredientItemStacksSoftReference.clearReferences(IngredientItemStacksSoftReference.java:31)
+	at TRANSFORMER/modernfix@5.24.4+mc1.20.1/org.embeddedt.modernfix.forge.recipe.IngredientItemStacksSoftReference$$Lambda$22333/0x000070a29eb82b88.run(Unknown Source)
+	at java.base@17.0.18/java.lang.Thread.run(Thread.java:840)
+
+
+"Yggdrasil Key Fetcher" daemon prio=5 Id=55 TIMED_WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@752b6e8f
+	at java.base@17.0.18/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@752b6e8f
+	at java.base@17.0.18/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+	at java.base@17.0.18/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1679)
+	at java.base@17.0.18/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+	at java.base@17.0.18/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+	at java.base@17.0.18/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+	at java.base@17.0.18/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+	at java.base@17.0.18/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	...
+
+
+"Server thread" prio=5 Id=64 RUNNABLE
+	at java.base@17.0.18/java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.base@17.0.18/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510)
+	at java.base@17.0.18/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base@17.0.18/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:575)
+	at java.base@17.0.18/java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260)
+	at java.base@17.0.18/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:616)
+	at java.base@17.0.18/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:622)
+	at java.base@17.0.18/java.util.stream.ReferencePipeline.toList(ReferencePipeline.java:627)
+	...
+
+
+"DestroyJavaVM" prio=5 Id=66 RUNNABLE
+
+
+"Server console handler" daemon prio=5 Id=67 RUNNABLE
+	at java.base@17.0.18/java.io.FileInputStream.read0(Native Method)
+	at java.base@17.0.18/java.io.FileInputStream.read(FileInputStream.java:228)
+	at MC-BOOTSTRAP/jline.terminal@3.12.1/org.jline.terminal.impl.AbstractPty$PtyInputStream.read(AbstractPty.java:73)
+	at MC-BOOTSTRAP/jline.terminal@3.12.1/org.jline.utils.NonBlockingInputStream.read(NonBlockingInputStream.java:62)
+	at MC-BOOTSTRAP/jline.terminal@3.12.1/org.jline.utils.NonBlocking$NonBlockingInputStreamReader.read(NonBlocking.java:168)
+	at MC-BOOTSTRAP/jline.terminal@3.12.1/org.jline.utils.NonBlockingReader.read(NonBlockingReader.java:57)
+	at MC-BOOTSTRAP/jline.reader@3.12.1/org.jline.keymap.BindingReader.readCharacter(BindingReader.java:133)
+	at MC-BOOTSTRAP/jline.reader@3.12.1/org.jline.keymap.BindingReader.readBinding(BindingReader.java:110)
+	...
+
+
+"Netty Epoll Server IO #0" daemon prio=5 Id=68 RUNNABLE (in native)
+	at MC-BOOTSTRAP/io.netty.transport.classes.epoll@4.1.82.Final/io.netty.channel.epoll.Native.epollWait(Native Method)
+	at MC-BOOTSTRAP/io.netty.transport.classes.epoll@4.1.82.Final/io.netty.channel.epoll.Native.epollWait(Native.java:209)
+	at MC-BOOTSTRAP/io.netty.transport.classes.epoll@4.1.82.Final/io.netty.channel.epoll.Native.epollWait(Native.java:202)
+	at MC-BOOTSTRAP/io.netty.transport.classes.epoll@4.1.82.Final/io.netty.channel.epoll.EpollEventLoop.epollWaitNoTimerChange(EpollEventLoop.java:306)
+	at MC-BOOTSTRAP/io.netty.transport.classes.epoll@4.1.82.Final/io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:363)
+	at MC-BOOTSTRAP/io.netty.common@4.1.82.Final/io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at MC-BOOTSTRAP/io.netty.common@4.1.82.Final/io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.base@17.0.18/java.lang.Thread.run(Thread.java:840)
+
+
+"FileSystemWatchService" daemon prio=5 Id=69 RUNNABLE (in native)
+	at java.base@17.0.18/sun.nio.fs.LinuxWatchService.poll(Native Method)
+	at java.base@17.0.18/sun.nio.fs.LinuxWatchService$Poller.run(LinuxWatchService.java:314)
+	at java.base@17.0.18/java.lang.Thread.run(Thread.java:840)
+
+
+"Netty Epoll Server IO #1" daemon prio=5 Id=76 RUNNABLE (in native)
+	at MC-BOOTSTRAP/io.netty.transport.classes.epoll@4.1.82.Final/io.netty.channel.epoll.Native.epollWait(Native Method)
+	at MC-BOOTSTRAP/io.netty.transport.classes.epoll@4.1.82.Final/io.netty.channel.epoll.Native.epollWait(Native.java:209)
+	at MC-BOOTSTRAP/io.netty.transport.classes.epoll@4.1.82.Final/io.netty.channel.epoll.Native.epollWait(Native.java:202)
+	at MC-BOOTSTRAP/io.netty.transport.classes.epoll@4.1.82.Final/io.netty.channel.epoll.EpollEventLoop.epollWaitNoTimerChange(EpollEventLoop.java:306)
+	at MC-BOOTSTRAP/io.netty.transport.classes.epoll@4.1.82.Final/io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:363)
+	at MC-BOOTSTRAP/io.netty.common@4.1.82.Final/io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at MC-BOOTSTRAP/io.netty.common@4.1.82.Final/io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.base@17.0.18/java.lang.Thread.run(Thread.java:840)
+
+
+"Server Watchdog" daemon prio=5 Id=81 RUNNABLE
+	at java.management@17.0.18/sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at java.management@17.0.18/sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:528)
+	at java.management@17.0.18/sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:516)
+	at TRANSFORMER/minecraft@1.20.1/net.minecraft.server.dedicated.ServerWatchdog.run(ServerWatchdog.java:41)
+	at java.base@17.0.18/java.lang.Thread.run(Thread.java:840)
+
+
+"LanServerPinger #1" daemon prio=5 Id=82 TIMED_WAITING
+	at java.base@17.0.18/java.lang.Thread.sleep(Native Method)
+	at TRANSFORMER/minecraft@1.20.1/net.minecraft.client.server.LanServerPinger.run(LanServerPinger.java:48)
+
+
+"Netty Epoll Server IO #2" daemon prio=5 Id=83 RUNNABLE (in native)
+	at MC-BOOTSTRAP/io.netty.transport.classes.epoll@4.1.82.Final/io.netty.channel.epoll.Native.epollWait(Native Method)
+	at MC-BOOTSTRAP/io.netty.transport.classes.epoll@4.1.82.Final/io.netty.channel.epoll.Native.epollWait(Native.java:209)
+	at MC-BOOTSTRAP/io.netty.transport.classes.epoll@4.1.82.Final/io.netty.channel.epoll.Native.epollWait(Native.java:202)
+	at MC-BOOTSTRAP/io.netty.transport.classes.epoll@4.1.82.Final/io.netty.channel.epoll.EpollEventLoop.epollWaitNoTimerChange(EpollEventLoop.java:306)
+	at MC-BOOTSTRAP/io.netty.transport.classes.epoll@4.1.82.Final/io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:363)
+	at MC-BOOTSTRAP/io.netty.common@4.1.82.Final/io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at MC-BOOTSTRAP/io.netty.common@4.1.82.Final/io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.base@17.0.18/java.lang.Thread.run(Thread.java:840)
+
+
+"Netty Epoll Server IO #3" daemon prio=5 Id=84 RUNNABLE (in native)
+	at MC-BOOTSTRAP/io.netty.transport.classes.epoll@4.1.82.Final/io.netty.channel.epoll.Native.epollWait(Native Method)
+	at MC-BOOTSTRAP/io.netty.transport.classes.epoll@4.1.82.Final/io.netty.channel.epoll.Native.epollWait(Native.java:209)
+	at MC-BOOTSTRAP/io.netty.transport.classes.epoll@4.1.82.Final/io.netty.channel.epoll.Native.epollWait(Native.java:202)
+	at MC-BOOTSTRAP/io.netty.transport.classes.epoll@4.1.82.Final/io.netty.channel.epoll.EpollEventLoop.epollWaitNoTimerChange(EpollEventLoop.java:306)
+	at MC-BOOTSTRAP/io.netty.transport.classes.epoll@4.1.82.Final/io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:363)
+	at MC-BOOTSTRAP/io.netty.common@4.1.82.Final/io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at MC-BOOTSTRAP/io.netty.common@4.1.82.Final/io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.base@17.0.18/java.lang.Thread.run(Thread.java:840)
+
+
+"Citadel Pathfinding Worker #0" daemon prio=10 Id=95 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@96ff392
+	at java.base@17.0.18/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@96ff392
+	at java.base@17.0.18/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+	at java.base@17.0.18/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+	at java.base@17.0.18/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3465)
+	at java.base@17.0.18/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3436)
+	at java.base@17.0.18/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1630)
+	at java.base@17.0.18/java.util.concurrent.LinkedBlockingDeque.takeFirst(LinkedBlockingDeque.java:485)
+	at java.base@17.0.18/java.util.concurrent.LinkedBlockingDeque.take(LinkedBlockingDeque.java:673)
+	...
+
+
+"Netty Epoll Server IO #4" daemon prio=5 Id=102 RUNNABLE (in native)
+	at MC-BOOTSTRAP/io.netty.transport.classes.epoll@4.1.82.Final/io.netty.channel.epoll.Native.epollWait(Native Method)
+	at MC-BOOTSTRAP/io.netty.transport.classes.epoll@4.1.82.Final/io.netty.channel.epoll.Native.epollWait(Native.java:209)
+	at MC-BOOTSTRAP/io.netty.transport.classes.epoll@4.1.82.Final/io.netty.channel.epoll.Native.epollWait(Native.java:202)
+	at MC-BOOTSTRAP/io.netty.transport.classes.epoll@4.1.82.Final/io.netty.channel.epoll.EpollEventLoop.epollWaitNoTimerChange(EpollEventLoop.java:306)
+	at MC-BOOTSTRAP/io.netty.transport.classes.epoll@4.1.82.Final/io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:363)
+	at MC-BOOTSTRAP/io.netty.common@4.1.82.Final/io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at MC-BOOTSTRAP/io.netty.common@4.1.82.Final/io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.base@17.0.18/java.lang.Thread.run(Thread.java:840)
+
+
+"Netty Epoll Server IO #5" daemon prio=5 Id=103 RUNNABLE (in native)
+	at MC-BOOTSTRAP/io.netty.transport.classes.epoll@4.1.82.Final/io.netty.channel.epoll.Native.epollWait(Native Method)
+	at MC-BOOTSTRAP/io.netty.transport.classes.epoll@4.1.82.Final/io.netty.channel.epoll.Native.epollWait(Native.java:209)
+	at MC-BOOTSTRAP/io.netty.transport.classes.epoll@4.1.82.Final/io.netty.channel.epoll.Native.epollWait(Native.java:202)
+	at MC-BOOTSTRAP/io.netty.transport.classes.epoll@4.1.82.Final/io.netty.channel.epoll.EpollEventLoop.epollWaitNoTimerChange(EpollEventLoop.java:306)
+	at MC-BOOTSTRAP/io.netty.transport.classes.epoll@4.1.82.Final/io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:363)
+	at MC-BOOTSTRAP/io.netty.common@4.1.82.Final/io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at MC-BOOTSTRAP/io.netty.common@4.1.82.Final/io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.base@17.0.18/java.lang.Thread.run(Thread.java:840)
+
+
+"Netty Epoll Server IO #6" daemon prio=5 Id=134 RUNNABLE (in native)
+	at MC-BOOTSTRAP/io.netty.transport.classes.epoll@4.1.82.Final/io.netty.channel.epoll.Native.epollWait(Native Method)
+	at MC-BOOTSTRAP/io.netty.transport.classes.epoll@4.1.82.Final/io.netty.channel.epoll.Native.epollWait(Native.java:209)
+	at MC-BOOTSTRAP/io.netty.transport.classes.epoll@4.1.82.Final/io.netty.channel.epoll.Native.epollWait(Native.java:202)
+	at MC-BOOTSTRAP/io.netty.transport.classes.epoll@4.1.82.Final/io.netty.channel.epoll.EpollEventLoop.epollWaitNoTimerChange(EpollEventLoop.java:306)
+	at MC-BOOTSTRAP/io.netty.transport.classes.epoll@4.1.82.Final/io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:363)
+	at MC-BOOTSTRAP/io.netty.common@4.1.82.Final/io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at MC-BOOTSTRAP/io.netty.common@4.1.82.Final/io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.base@17.0.18/java.lang.Thread.run(Thread.java:840)
+
+
+"Netty Epoll Server IO #7" daemon prio=5 Id=135 RUNNABLE (in native)
+	at MC-BOOTSTRAP/io.netty.transport.classes.epoll@4.1.82.Final/io.netty.channel.epoll.Native.epollWait(Native Method)
+	at MC-BOOTSTRAP/io.netty.transport.classes.epoll@4.1.82.Final/io.netty.channel.epoll.Native.epollWait(Native.java:209)
+	at MC-BOOTSTRAP/io.netty.transport.classes.epoll@4.1.82.Final/io.netty.channel.epoll.Native.epollWait(Native.java:202)
+	at MC-BOOTSTRAP/io.netty.transport.classes.epoll@4.1.82.Final/io.netty.channel.epoll.EpollEventLoop.epollWaitNoTimerChange(EpollEventLoop.java:306)
+	at MC-BOOTSTRAP/io.netty.transport.classes.epoll@4.1.82.Final/io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:363)
+	at MC-BOOTSTRAP/io.netty.common@4.1.82.Final/io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at MC-BOOTSTRAP/io.netty.common@4.1.82.Final/io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.base@17.0.18/java.lang.Thread.run(Thread.java:840)
+
+
+
+Stacktrace:
+	at net.minecraft.server.dedicated.ServerWatchdog.run(ServerWatchdog.java:56) ~[server-1.20.1-20230612.114412-srg.jar%23375!/:?] {re:classloading,pl:connector_pre_launch:A}
+	at java.lang.Thread.run(Thread.java:840) ~[?:?] {re:mixin}
+
+
+-- Performance stats --
+Details:
+	Random tick rate: 3
+	Level stats: ResourceKey[minecraft:dimension / minecraft:overworld]: players: 0, entities: 265,264,130,1154,1154,0,0 [minecraft:falling_block:96,minecraft:pig:25,minecraft:chicken:19,minecraft:cow:19,minecraft:item:18], block_entities: 257 [alexscaves:tesla_bulb:63,minecraft:mob_spawner:63,trials:trials_spawner:28,minecraft:campfire:26,alexscaves:magnet:24], block_ticks: 3336, fluid_ticks: 74, chunk_source: Chunks[S] W: 5339 E: 265,264,130,1154,1154,0,0,
+ResourceKey[minecraft:dimension / immersive_portals:alternate4]: players: 0, entities: 0,0,0,0,0,0,0 [], block_entities: 0 [], block_ticks: 0, fluid_ticks: 0, chunk_source: Chunks[S] W: 0 E: 0,0,0,0,0,0,0,
+ResourceKey[minecraft:dimension / immersive_portals:alternate5]: players: 0, entities: 0,0,0,0,0,0,0 [], block_entities: 0 [], block_ticks: 0, fluid_ticks: 0, chunk_source: Chunks[S] W: 0 E: 0,0,0,0,0,0,0,
+ResourceKey[minecraft:dimension / minecraft:the_end]: players: 0, entities: 0,0,0,0,0,0,0 [], block_entities: 0 [], block_ticks: 0, fluid_ticks: 0, chunk_source: Chunks[S] W: 0 E: 0,0,0,0,0,0,0,
+ResourceKey[minecraft:dimension / immersive_portals:alternate2]: players: 0, entities: 0,0,0,0,0,0,0 [], block_entities: 0 [], block_ticks: 0, fluid_ticks: 0, chunk_source: Chunks[S] W: 0 E: 0,0,0,0,0,0,0,
+ResourceKey[minecraft:dimension / immersive_portals:alternate3]: players: 0, entities: 0,0,0,0,0,0,0 [], block_entities: 0 [], block_ticks: 0, fluid_ticks: 0, chunk_source: Chunks[S] W: 0 E: 0,0,0,0,0,0,0,
+ResourceKey[minecraft:dimension / immersive_portals:alternate1]: players: 0, entities: 0,0,0,0,0,0,0 [], block_entities: 0 [], block_ticks: 0, fluid_ticks: 0, chunk_source: Chunks[S] W: 0 E: 0,0,0,0,0,0,0,
+ResourceKey[minecraft:dimension / twilightforest:twilight_forest]: players: 0, entities: 0,0,0,0,0,0,0 [], block_entities: 0 [], block_ticks: 0, fluid_ticks: 0, chunk_source: Chunks[S] W: 0 E: 0,0,0,0,0,0,0,
+ResourceKey[minecraft:dimension / minecraft:the_nether]: players: 0, entities: 0,0,0,0,0,0,0 [], block_entities: 0 [], block_ticks: 0, fluid_ticks: 0, chunk_source: Chunks[S] W: 0 E: 0,0,0,0,0,0,0
+
+-- System Details --
+Details:
+	Minecraft Version: 1.20.1
+	Minecraft Version ID: 1.20.1
+	Operating System: Linux (amd64) version 6.8.0-1044-azure
+	Java Version: 17.0.18, Ubuntu
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Ubuntu
+	Memory: 610143296 bytes (581 MiB) / 3137339392 bytes (2992 MiB) up to 12884901888 bytes (12288 MiB)
+	CPUs: 4
+	Processor Vendor: AuthenticAMD
+	Processor Name: AMD EPYC 7763 64-Core Processor
+	Identifier: AuthenticAMD Family 25 Model 1 Stepping 1
+	Microarchitecture: Zen 3
+	Frequency (GHz): -0.00
+	Number of physical packages: 1
+	Number of physical CPUs: 2
+	Number of logical CPUs: 4
+	Graphics card #0 name: unknown
+	Graphics card #0 vendor: unknown
+	Graphics card #0 VRAM (MB): 0.00
+	Graphics card #0 deviceId: unknown
+	Graphics card #0 versionInfo: unknown
+	Virtual memory max (MB): 7997.94
+	Virtual memory used (MB): 9596.68
+	Swap memory total (MB): 0.00
+	Swap memory used (MB): 0.00
+	JVM Flags: 2 total; -Xms2G -Xmx12G
+	Server Running: true
+	Player Count: 0 / 20; []
+	Data Packs: vanilla, mod:forge, mod:supermartijn642configlib (incompatible), mod:playeranimator (incompatible), mod:connectorextras_kubejs_bridge, mod:fabric_rendering_fluids_v1, mod:fabric_models_v0, mod:fabric_convention_tags_v1, mod:modernfix (incompatible), mod:fabric_command_api_v1, mod:fabric_block_view_api_v2, mod:fabric_command_api_v2, mod:yungsapi, mod:connectorextras_rei_bridge, mod:balm, mod:luminous_butterflies, mod:fabric_screen_api_v1, mod:cloth_config (incompatible), mod:connectorextras_terrablender_bridge, mod:structure_gel, mod:copperagebackport (incompatible), mod:repurposed_structures, mod:fabric_game_rule_api_v1, mod:do_a_barrel_roll (incompatible), mod:supermartijn642corelib, mod:botania, mod:resourcefulconfig (incompatible), mod:curios (incompatible), mod:fabric_entity_events_v1, mod:nirvana_lib, mod:lootbeams, mod:fabric_rendering_data_attachment_v1, mod:trials, mod:fabric_client_tags_api_v1, mod:fabric_dimensions_v1, mod:mowziesmobs, mod:fabric_model_loading_api_v1, mod:visualworkbench, mod:fabric_screen_handler_api_v1, mod:goblintraders (incompatible), mod:fabric_rendering_v1, mod:fabric_renderer_indigo, mod:multikulti_core, mod:nirvana, mod:botanypots (incompatible), mod:glitchcore (incompatible), mod:sereneseasons, mod:connectorextras_geckolib_fabric_compat, mod:multikulti_registrate, mod:immersive_portals (incompatible), mod:fabric_particles_v1, mod:puzzlesaccessapi, mod:waves, mod:wither_spawn_animation, mod:dungeons_arise, mod:rustic_engineer, mod:golem_spawn_animation, mod:happyghast, mod:realmrpg_skeletons, mod:terrablender, mod:biomesoplenty (incompatible), mod:fabric_api_base, mod:fabric_block_api_v1, mod:connectorextras_jei_bridge, mod:fabric_resource_conditions_api_v1, mod:forgeconfigapiport, mod:kotlinforforge (incompatible), mod:flywheel, mod:ponder (incompatible), mod:fabric_item_group_api_v1, mod:zeta (incompatible), mod:fabric_registry_sync_v0, mod:tlc (incompatible), mod:fabric_recipe_api_v1, mod:palegarden, mod:fabric_object_builder_api_v1, mod:puzzleslib, mod:fabric_sound_api_v1, mod:fabric_message_api_v1, mod:cosmeticarmorreworked, mod:explosiveenhancement, mod:euphoria_patcher, mod:aquamirae (incompatible), mod:xpbook, mod:cristellib (incompatible), mod:weaponmaster_ydm (incompatible), mod:treechop (incompatible), mod:kuma_api, mod:fabric_renderer_api_v1, mod:onlyhammers (incompatible), mod:geckolib, mod:fabric_item_api_v1, mod:sophisticatedcore (incompatible), mod:better_falling, mod:placebo (incompatible), mod:citadel (incompatible), mod:alexsmobs (incompatible), mod:fabric_data_attachment_api_v1, mod:bookshelf, mod:sophisticatedbackpacks (incompatible), mod:carryon (incompatible), mod:shieldexp (incompatible), mod:bettercombat (incompatible), mod:fzzy_config (incompatible), mod:fabric_api, mod:connectorextras_modmenu_bridge, mod:fabric_content_registries_v0, mod:farmersdelight, mod:entity_model_features (incompatible), mod:entity_texture_features (incompatible), mod:fabric_api_lookup_api_v1, mod:endrem (incompatible), mod:dogslie, mod:reach_entity_attributes, mod:lionfishapi (incompatible), mod:connectorextras_architectury_bridge, mod:cataclysm (incompatible), mod:patchouli (incompatible), mod:connectormod, mod:architectury (incompatible), mod:fabric_loot_api_v2, mod:cupboard (incompatible), mod:connectorextras, mod:amblekit, mod:fabric_networking_api_v1, mod:framework, mod:t_and_t (incompatible), mod:fabric_lifecycle_events_v1, mod:effortlessbuilding, mod:galena_hats (incompatible), mod:fabric_key_binding_api_v1, mod:fabric_transfer_api_v1, mod:trashslot, mod:sophisticatedstorage (incompatible), mod:octolib, mod:perception, mod:commonnetworking (incompatible), mod:connectorextras_pehkui_bridge, mod:fabric_resource_loader_v0, mod:obscure_api (incompatible), mod:waystones, mod:fabric_mining_level_api_v1, mod:dungeoncrawl, mod:xpfarming, mod:aggroindicator, mod:xp_in_a_jar, mod:particular (incompatible), mod:ichunutil, mod:blueprint, mod:personality, mod:connectorextras_energy_bridge, mod:watut, mod:fabric_transitive_access_wideners_v1, mod:nyfsspiders (incompatible), mod:alexscaves, mod:simplyswords (incompatible), mod:moonlight (incompatible), mod:extragore, mod:fabric_blockrenderlayer_v1, mod:mixinsquared (incompatible), mod:amecsapi, mod:creativecore, mod:nethersdelight, mod:ribbits (incompatible), mod:iceberg (incompatible), mod:quark (incompatible), mod:supplementaries, mod:amendments (incompatible), mod:fastbench (incompatible), mod:parcool (incompatible), mod:paraglider (incompatible), mod:fabric_biome_api_v1, mod:coroutil (incompatible), mod:ferritecore (incompatible), mod:yet_another_config_lib_v3 (incompatible), mod:wakes (incompatible), mod:connectorextras_emi_bridge, mod:fabric_data_generation_api_v1, mod:fabric_events_interaction_v0, mod:presencefootsteps (incompatible), Supplementaries Generated Pack, T&T Waystone Patch Pack (incompatible), fabric, mod:everlastingskins (incompatible), mod:stardew_fishing (incompatible), mod:twilightforest, mod:fdbosses (incompatible), mod:caelus (incompatible), mod:fdlib (incompatible), mod:weapon, mod:raidsenhanced (incompatible), mod:corpse, mod:corpsecurioscompat, mod:polytone (incompatible), mod:cosmeticcorpsecompat (incompatible), mod:dynamiclights, mod:baguettelib (incompatible), mod:majruszsdifficulty (incompatible), mod:majruszlibrary (incompatible), mod:legendary_monsters, mod:subtle_effects
+	Enabled Feature Flags: minecraft:vanilla
+	World Generation: Stable
+	Is Modded: Definitely; Server brand changed to 'forge'
+	Type: Dedicated Server (map_server.txt)
+	Sinytra Connector: 1.0.0-beta.46+1.20.1
+		SINYTRA CONNECTOR IS PRESENT!
+		Please verify issues are not caused by Connector before reporting them to mod authors. If you're unsure, file a report on Connector's issue tracker.
+		Connector's issue tracker can be found at https://github.com/Sinytra/Connector/issues.
+	ModLauncher: 10.0.9+10.0.9+main.dcd20f30
+	ModLauncher launch target: forgeserver
+	ModLauncher naming: srg
+	ModLauncher services: 
+		mixin-0.8.5.jar mixin PLUGINSERVICE 
+		eventbus-6.0.5.jar eventbus PLUGINSERVICE 
+		fmlloader-1.20.1-47.4.13.jar slf4jfixer PLUGINSERVICE 
+		fmlloader-1.20.1-47.4.13.jar object_holder_definalize PLUGINSERVICE 
+		fmlloader-1.20.1-47.4.13.jar runtime_enum_extender PLUGINSERVICE 
+		fmlloader-1.20.1-47.4.13.jar capability_token_subclass PLUGINSERVICE 
+		accesstransformers-8.0.4.jar accesstransformer PLUGINSERVICE 
+		fmlloader-1.20.1-47.4.13.jar runtimedistcleaner PLUGINSERVICE 
+		modlauncher-10.0.9.jar mixin TRANSFORMATIONSERVICE 
+		modlauncher-10.0.9.jar fml TRANSFORMATIONSERVICE 
+		modlauncher-10.0.9.jar mixin-transmogrifier TRANSFORMATIONSERVICE 
+		modlauncher-10.0.9.jar connector_loader TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		minecraft@1.0
+		kotlinforforge@4.11.0
+		javafml@null
+		lowcodefml@null
+	Mod List: 
+		supermartijn642configlib-1.1.8-forge-mc1.20.jar   |SuperMartijn642's Config Libra|supermartijn642configlib      |1.1.8               |DONE      |Manifest: NOSIGNATURE
+		player-animation-lib-forge-1.0.2-rc1+1.20.jar     |Player Animator               |playeranimator                |1.0.2-rc1+1.20      |DONE      |Manifest: NOSIGNATURE
+		kubejs-bridge-1.11.2+1.20.1.jar                   |Connector Extras KubeJS Bridge|connectorextras_kubejs_bridge |1.11.2+1.20.1       |DONE      |Manifest: NOSIGNATURE
+		fabric-rendering-fluids-v1-3.0.29+4ac5e37a77.jar  |Fabric Rendering Fluids (v1)  |fabric_rendering_fluids_v1    |3.0.29+4ac5e37a77   |DONE      |Manifest: NOSIGNATURE
+		SubtleEffects-forge-1.20.1-1.13.2.jar             |Subtle Effects                |subtle_effects                |1.13.2              |DONE      |Manifest: NOSIGNATURE
+		majruszs-difficulty-forge-1.20.1-1.9.10.jar       |Majrusz's Progressive Difficul|majruszsdifficulty            |1.9.10              |DONE      |Manifest: NOSIGNATURE
+		fabric-models-v0-0.4.3+7c3892a477.jar             |Fabric Models (v0)            |fabric_models_v0              |0.4.3+7c3892a477    |DONE      |Manifest: NOSIGNATURE
+		fabric-convention-tags-v1-1.5.6+fa3d1c0177.jar    |Fabric Convention Tags        |fabric_convention_tags_v1     |1.5.6+fa3d1c0177    |DONE      |Manifest: NOSIGNATURE
+		EverlastingSkins-1.20.1-1.0.jar                   |Everlasting Skins             |everlastingskins              |1.0                 |DONE      |Manifest: NOSIGNATURE
+		modernfix-forge-5.24.4+mc1.20.1.jar               |ModernFix                     |modernfix                     |5.24.4+mc1.20.1     |DONE      |Manifest: NOSIGNATURE
+		fabric-command-api-v1-1.2.35+f71b366f77.jar       |Fabric Command API (v1)       |fabric_command_api_v1         |1.2.35+f71b366f77   |DONE      |Manifest: NOSIGNATURE
+		fabric-block-view-api-v2-1.0.3+53347ba977.jar     |Fabric BlockView API (v2)     |fabric_block_view_api_v2      |1.0.3+53347ba977    |DONE      |Manifest: NOSIGNATURE
+		fabric-command-api-v2-2.2.14+561530ec77.jar       |Fabric Command API (v2)       |fabric_command_api_v2         |2.2.14+561530ec77   |DONE      |Manifest: NOSIGNATURE
+		YungsApi-1.20-Forge-4.0.6.jar                     |YUNG's API                    |yungsapi                      |1.20-Forge-4.0.6    |DONE      |Manifest: NOSIGNATURE
+		rei-bridge-1.11.2+1.20.1.jar                      |Connector Extras REI Bridge   |connectorextras_rei_bridge    |1.11.2+1.20.1       |DONE      |Manifest: NOSIGNATURE
+		fdbosses-3.1.0.3-1.20.1.jar                       |Qliphoth Awakening            |fdbosses                      |3.1.0.3             |DONE      |Manifest: NOSIGNATURE
+		balm-forge-1.20.1-7.3.34-all.jar                  |Balm                          |balm                          |7.3.34              |DONE      |Manifest: NOSIGNATURE
+		Luminous Butterflies V1.2 - Forge 1.20.1.jar      |Luminous: Butterflies         |luminous_butterflies          |1.2                 |DONE      |Manifest: NOSIGNATURE
+		fabric-screen-api-v1-2.0.9+45a670a577.jar         |Fabric Screen API (v1)        |fabric_screen_api_v1          |2.0.9+45a670a577    |DONE      |Manifest: NOSIGNATURE
+		cloth-config-11.1.136-forge.jar                   |Cloth Config v10 API          |cloth_config                  |11.1.136            |DONE      |Manifest: NOSIGNATURE
+		terrablender-bridge-1.11.2+1.20.1.jar             |Connector Extras Terrablender |connectorextras_terrablender_b|1.11.2+1.20.1       |DONE      |Manifest: NOSIGNATURE
+		structure_gel-1.20.1-2.16.2.jar                   |Structure Gel API             |structure_gel                 |2.16.2              |DONE      |Manifest: NOSIGNATURE
+		corpse-forge-1.20.1-1.0.23.jar                    |Corpse                        |corpse                        |1.20.1-1.0.23       |DONE      |Manifest: NOSIGNATURE
+		copperagebackport-forge-1.20.1-0.1.4.jar          |Copper-Age-Backport           |copperagebackport             |0.1.4               |DONE      |Manifest: NOSIGNATURE
+		repurposed_structures-7.1.19+1.20.1-forge.jar     |Repurposed Structures         |repurposed_structures         |7.1.19+1.20.1-forge |DONE      |Manifest: NOSIGNATURE
+		fabric-game-rule-api-v1-1.0.41+683d4da877.jar     |Fabric Game Rule API (v1)     |fabric_game_rule_api_v1       |1.0.41+683d4da877   |DONE      |Manifest: NOSIGNATURE
+		do_a_barrel_roll-forge-3.5.6+1.20.1.jar           |Do a Barrel Roll              |do_a_barrel_roll              |3.5.6+1.20.1        |DONE      |Manifest: NOSIGNATURE
+		supermartijn642corelib-1.1.18-forge-mc1.20.1.jar  |SuperMartijn642's Core Lib    |supermartijn642corelib        |1.1.18              |DONE      |Manifest: NOSIGNATURE
+		Botania-1.20.1-450-FORGE.jar                      |Botania                       |botania                       |1.20.1-450-FORGE    |DONE      |Manifest: NOSIGNATURE
+		resourcefulconfig-forge-1.20.1-2.1.3.jar          |Resourcefulconfig             |resourcefulconfig             |2.1.3               |DONE      |Manifest: NOSIGNATURE
+		curios-forge-5.14.1+1.20.1.jar                    |Curios API                    |curios                        |5.14.1+1.20.1       |DONE      |Manifest: NOSIGNATURE
+		fabric-entity-events-v1-1.6.1+4ca7515277.jar      |Fabric Entity Events (v1)     |fabric_entity_events_v1       |1.6.1+4ca7515277    |DONE      |Manifest: NOSIGNATURE
+		Nirvana Lib-forge-1.20.1-2.0.15.jar               |Nirvana Lib                   |nirvana_lib                   |2.0.15              |DONE      |Manifest: NOSIGNATURE
+		Loot Beams Refork-forge-1.20.1-3.2.6.jar          |Loot Beams Refork             |lootbeams                     |3.2.6               |DONE      |Manifest: NOSIGNATURE
+		fabric-rendering-data-attachment-v1-0.3.39+a6081af|Fabric Rendering Data Attachme|fabric_rendering_data_attachme|0.3.39+a6081afc77   |DONE      |Manifest: NOSIGNATURE
+		Trials-2.3.3.jar                                  |Trials Chambers               |trials                        |2.3.3               |DONE      |Manifest: NOSIGNATURE
+		majrusz-library-forge-1.20.1-7.0.8.jar            |Majrusz Library               |majruszlibrary                |7.0.8               |DONE      |Manifest: NOSIGNATURE
+		fabric-client-tags-api-v1-1.1.3+5d6761b877.jar    |Fabric Client Tags            |fabric_client_tags_api_v1     |1.1.3+5d6761b877    |DONE      |Manifest: NOSIGNATURE
+		fabric-dimensions-v1-2.1.55+8005d10d77.jar        |Fabric Dimensions API (v1)    |fabric_dimensions_v1          |2.1.55+8005d10d77   |DONE      |Manifest: NOSIGNATURE
+		mowziesmobs-1.8.2.jar                             |Mowzie's Mobs                 |mowziesmobs                   |1.8.2               |DONE      |Manifest: NOSIGNATURE
+		fabric-model-loading-api-v1-1.0.4+6274ab9d77.jar  |Fabric Model Loading API (v1) |fabric_model_loading_api_v1   |1.0.4+6274ab9d77    |DONE      |Manifest: NOSIGNATURE
+		VisualWorkbench-v8.0.1-1.20.1-Forge.jar           |Visual Workbench              |visualworkbench               |8.0.1               |DONE      |Manifest: 9a:09:85:98:65:c4:8c:11:c5:49:f6:d6:33:23:39:df:8d:b4:ff:92:84:b8:bd:a5:83:9f:ac:7f:2a:d1:4b:6a
+		fabric-screen-handler-api-v1-1.3.33+561530ec77.jar|Fabric Screen Handler API (v1)|fabric_screen_handler_api_v1  |1.3.33+561530ec77   |DONE      |Manifest: NOSIGNATURE
+		goblintraders-forge-1.20.1-1.11.5.jar             |Goblin Traders                |goblintraders                 |1.11.5              |DONE      |Manifest: 0d:78:5f:44:c0:47:0c:8c:e2:63:a3:04:43:d4:12:7d:b0:7c:35:37:dc:40:b1:c1:98:ec:51:eb:3b:3c:45:99
+		caelus-forge-3.2.0+1.20.1.jar                     |Caelus API                    |caelus                        |3.2.0+1.20.1        |DONE      |Manifest: NOSIGNATURE
+		fabric-rendering-v1-3.0.9+66e9a48f77.jar          |Fabric Rendering (v1)         |fabric_rendering_v1           |3.0.9+66e9a48f77    |DONE      |Manifest: NOSIGNATURE
+		fabric-renderer-indigo-1.5.3+b5b2da4177.jar       |Fabric Renderer - Indigo      |fabric_renderer_indigo        |1.5.3+b5b2da4177    |DONE      |Manifest: NOSIGNATURE
+		multikulti-core-forge-1.20.1-1.1.5.jar            |Multi-Kulti                   |multikulti_core               |1.20.1-1.1.5        |DONE      |Manifest: NOSIGNATURE
+		nirvana-forge-1.2.2.jar                           |Nirvana                       |nirvana                       |1.2.2               |DONE      |Manifest: NOSIGNATURE
+		BotanyPots-Forge-1.20.1-13.0.41.jar               |BotanyPots                    |botanypots                    |13.0.41             |DONE      |Manifest: NOSIGNATURE
+		GlitchCore-forge-1.20.1-0.0.1.1.jar               |GlitchCore                    |glitchcore                    |0.0.1.1             |DONE      |Manifest: NOSIGNATURE
+		SereneSeasons-forge-1.20.1-9.1.0.2.jar            |Serene Seasons                |sereneseasons                 |9.1.0.2             |DONE      |Manifest: NOSIGNATURE
+		geckolib-fabric-compat-1.11.2+1.20.1.jar          |Connector Extras Geckolib-Fabr|connectorextras_geckolib_fabri|1.11.2+1.20.1       |DONE      |Manifest: NOSIGNATURE
+		multikulti-registrate-forge-1.20.1-1.1.5.jar      |Multi-Kulti                   |multikulti_registrate         |1.20.1-1.1.5        |DONE      |Manifest: NOSIGNATURE
+		corpsecurioscompat-1.20.1-Forge-3.1.3.jar         |corpsecurioscompat            |corpsecurioscompat            |3.1.3               |DONE      |Manifest: NOSIGNATURE
+		immersive-portals-3.0.1-mc1.20.1-forge.jar        |Immersive Portals             |immersive_portals             |3.0.1               |DONE      |Manifest: NOSIGNATURE
+		fabric-particles-v1-1.1.3+78e1ecb877.jar          |Fabric Particles (v1)         |fabric_particles_v1           |1.1.3+78e1ecb877    |DONE      |Manifest: NOSIGNATURE
+		puzzlesaccessapi-forge-20.1.1.jar                 |Puzzles Access Api            |puzzlesaccessapi              |20.1.1              |DONE      |Manifest: NOSIGNATURE
+		forge-1.20.1-47.4.13-universal.jar                |Forge                         |forge                         |47.4.13             |DONE      |Manifest: NOSIGNATURE
+		Waves-1.20.1-1.6.1.jar                            |Waves                         |waves                         |1.6.1               |DONE      |Manifest: NOSIGNATURE
+		polytone-1.20-3.5.25.jar                          |Polytone                      |polytone                      |1.20-3.5.25         |DONE      |Manifest: NOSIGNATURE
+		wither_spawn_animation-1.5.2-forge-1.20.1.jar     |Wither Spawn Animation        |wither_spawn_animation        |1.5.2               |DONE      |Manifest: NOSIGNATURE
+		DungeonsArise-1.20.x-2.1.58-release.jar           |When Dungeons Arise           |dungeons_arise                |2.1.58-1.20.x       |DONE      |Manifest: NOSIGNATURE
+		server-1.20.1-20230612.114412-srg.jar             |Minecraft                     |minecraft                     |1.20.1              |DONE      |Manifest: NOSIGNATURE
+		rustic_engineer-1.1.3-forge-1.20.1.jar            |Rustic Engineer               |rustic_engineer               |1.1.3               |DONE      |Manifest: NOSIGNATURE
+		golem_spawn_animation-1.1-forge-1.20.1.jar        |Golem Spawn Animation         |golem_spawn_animation         |1.1                 |DONE      |Manifest: NOSIGNATURE
+		happyghast-1.6.2-forge-1.20.1.jar                 |HappyGhast                    |happyghast                    |1.6.2               |DONE      |Manifest: NOSIGNATURE
+		realmrpg_skeletons-1.1.0-forge-1.20.1.jar         |Realm RPG: Fallen Adventurers |realmrpg_skeletons            |1.1.0               |DONE      |Manifest: NOSIGNATURE
+		TerraBlender-forge-1.20.1-3.0.1.10.jar            |TerraBlender                  |terrablender                  |3.0.1.10            |DONE      |Manifest: NOSIGNATURE
+		BiomesOPlenty-1.20.1-18.0.0.592.jar               |Biomes O' Plenty              |biomesoplenty                 |18.0.0.592          |DONE      |Manifest: NOSIGNATURE
+		fabric-api-base-0.4.32+ef105b4977.jar             |Fabric API Base               |fabric_api_base               |0.4.32+ef105b4977   |DONE      |Manifest: NOSIGNATURE
+		fdlib-1.0.9-1.20.1.jar                            |FDLib                         |fdlib                         |1.0.9               |DONE      |Manifest: NOSIGNATURE
+		fabric-block-api-v1-1.0.12+0e6cb7f777.jar         |Fabric Block API (v1)         |fabric_block_api_v1           |1.0.12+0e6cb7f777   |DONE      |Manifest: NOSIGNATURE
+		jei-bridge-1.11.2+1.20.1.jar                      |Connector Extras JEI Bridge   |connectorextras_jei_bridge    |1.11.2+1.20.1       |DONE      |Manifest: NOSIGNATURE
+		weapon-0.1.5-forge-1.20.1.jar                     |Kind of Nice Weapon           |weapon                        |0.1.5               |DONE      |Manifest: NOSIGNATURE
+		fabric-resource-conditions-api-v1-2.3.9+996d00b277|Fabric Resource Conditions API|fabric_resource_conditions_api|2.3.9+996d00b277    |DONE      |Manifest: NOSIGNATURE
+		forgeconfigapiport-1.11.2+1.20.1.jar              |Forge Config API Port (Connect|forgeconfigapiport            |8.0.0               |DONE      |Manifest: NOSIGNATURE
+		kffmod-4.11.0.jar                                 |Kotlin For Forge              |kotlinforforge                |4.11.0              |DONE      |Manifest: NOSIGNATURE
+		flywheel-forge-1.20.1-1.0.1.jar                   |Flywheel                      |flywheel                      |1.0.1               |DONE      |Manifest: NOSIGNATURE
+		Ponder-Forge-1.20.1-1.0.51.jar                    |Ponder                        |ponder                        |1.0.51              |DONE      |Manifest: NOSIGNATURE
+		fabric-item-group-api-v1-4.0.14+c9161c2d77.jar    |Fabric Item Group API (v1)    |fabric_item_group_api_v1      |4.0.14+c9161c2d77   |DONE      |Manifest: NOSIGNATURE
+		Zeta-1.0-30.jar                                   |Zeta                          |zeta                          |1.0-30              |DONE      |Manifest: NOSIGNATURE
+		cosmeticcorpsecompat-1.19.x-1.20.x-Forge-1.0.0.jar|Cosmetic Armor x Corpse Compat|cosmeticcorpsecompat          |1.0.0               |DONE      |Manifest: NOSIGNATURE
+		fabric-registry-sync-v0-2.3.6+1c0ea72177.jar      |Fabric Registry Sync (v0)     |fabric_registry_sync_v0       |2.3.6+1c0ea72177    |DONE      |Manifest: NOSIGNATURE
+		tlc_forge-1.0.3-R-1.20.X.jar                      |The Lost Castle               |tlc                           |1.0.2               |DONE      |Manifest: NOSIGNATURE
+		fabric-recipe-api-v1-1.0.24+514a076577.jar        |Fabric Recipe API (v1)        |fabric_recipe_api_v1          |1.0.24+514a076577   |DONE      |Manifest: NOSIGNATURE
+		palegarden-1.0.7-forge-1.20.1.jar                 |palegarden                    |palegarden                    |1.0.7               |DONE      |Manifest: NOSIGNATURE
+		fabric-object-builder-api-v1-11.1.5+f8c414ce77.jar|Fabric Object Builder API (v1)|fabric_object_builder_api_v1  |11.1.5+f8c414ce77   |DONE      |Manifest: NOSIGNATURE
+		PuzzlesLib-v8.1.33-1.20.1-Forge.jar               |Puzzles Lib                   |puzzleslib                    |8.1.33              |DONE      |Manifest: 9a:09:85:98:65:c4:8c:11:c5:49:f6:d6:33:23:39:df:8d:b4:ff:92:84:b8:bd:a5:83:9f:ac:7f:2a:d1:4b:6a
+		fabric-sound-api-v1-1.0.14+4f23bd8477.jar         |Fabric Sound API (v1)         |fabric_sound_api_v1           |1.0.14+4f23bd8477   |DONE      |Manifest: NOSIGNATURE
+		fabric-message-api-v1-5.1.10+52cc178c77.jar       |Fabric Message API (v1)       |fabric_message_api_v1         |5.1.10+52cc178c77   |DONE      |Manifest: NOSIGNATURE
+		cosmeticarmorreworked-1.20.1-v1a.jar              |CosmeticArmorReworked         |cosmeticarmorreworked         |1.20.1-v1a          |DONE      |Manifest: 5e:ed:25:99:e4:44:14:c0:dd:89:c1:a9:4c:10:b5:0d:e4:b1:52:50:45:82:13:d8:d0:32:89:67:56:57:01:53
+		explosiveenhancement-1.1.0-1.20.1-client-and-serve|Explosive Enhancement         |explosiveenhancement          |1.1.0               |DONE      |Manifest: NOSIGNATURE
+		EuphoriaPatcher-1.8.6-r5.7.1-forge.jar            |Euphoria Patcher              |euphoria_patcher              |1.8.6-r5.7.1-forge  |DONE      |Manifest: NOSIGNATURE
+		aquamirae-forge-1.20.1-6.1.0.jar                  |Aquamirae                     |aquamirae                     |6.1.0               |DONE      |Manifest: NOSIGNATURE
+		xptome-1.20.1-2.2.1.jar                           |XP Tome                       |xpbook                        |2.2.1               |DONE      |Manifest: NOSIGNATURE
+		cristellib-1.1.6-forge.jar                        |Cristel Lib                   |cristellib                    |1.1.6               |DONE      |Manifest: NOSIGNATURE
+		weaponmaster_ydm-forge-1.20.1-4.2.3.jar           |YDM's Weapon Master           |weaponmaster_ydm              |4.2.3               |DONE      |Manifest: NOSIGNATURE
+		TreeChop-1.20.1-forge-0.19.0-fixed.jar            |HT's TreeChop                 |treechop                      |0.19.0              |DONE      |Manifest: NOSIGNATURE
+		kuma-api-forge-20.1.10+1.20.1.jar                 |KumaAPI                       |kuma_api                      |20.1.10             |DONE      |Manifest: NOSIGNATURE
+		fabric-renderer-api-v1-3.2.2+cf68abbe77.jar       |Fabric Renderer API (v1)      |fabric_renderer_api_v1        |3.2.2+cf68abbe77    |DONE      |Manifest: NOSIGNATURE
+		onlyhammers-com.blocklegend001.jar                |OnlyHammers                   |onlyhammers                   |1.20.1-0.6          |DONE      |Manifest: NOSIGNATURE
+		geckolib-forge-1.20.1-4.8.3.jar                   |GeckoLib 4                    |geckolib                      |4.8.3               |DONE      |Manifest: NOSIGNATURE
+		fabric-item-api-v1-2.1.29+4d0bbcfa77.jar          |Fabric Item API (v1)          |fabric_item_api_v1            |2.1.29+4d0bbcfa77   |DONE      |Manifest: NOSIGNATURE
+		dynamiclights-v1.9-mc1.17-1.21.5-mod.jar          |Dynamic Lights                |dynamiclights                 |1.9+mod             |DONE      |Manifest: NOSIGNATURE
+		sophisticatedcore-1.20.1-1.2.81.1091.jar          |Sophisticated Core            |sophisticatedcore             |1.2.81.1091         |DONE      |Manifest: NOSIGNATURE
+		better_falling-2.2.1-forge-1.20.1.jar             |Better Falling                |better_falling                |2.2.1               |DONE      |Manifest: NOSIGNATURE
+		Placebo-1.20.1-8.6.3.jar                          |Placebo                       |placebo                       |8.6.3               |DONE      |Manifest: NOSIGNATURE
+		citadel-2.6.2-1.20.1.jar                          |Citadel                       |citadel                       |2.6.2               |DONE      |Manifest: NOSIGNATURE
+		alexsmobs-1.22.9.jar                              |Alex's Mobs                   |alexsmobs                     |1.22.9              |DONE      |Manifest: NOSIGNATURE
+		fabric-data-attachment-api-v1-1.0.2+30ef839e77.jar|Fabric Data Attachment API (v1|fabric_data_attachment_api_v1 |1.0.2+30ef839e77    |DONE      |Manifest: NOSIGNATURE
+		stardew_fishing-3.6-1.20.1.jar                    |Stardew Fishing               |stardew_fishing               |3.6                 |DONE      |Manifest: NOSIGNATURE
+		Bookshelf-Forge-1.20.1-20.2.13.jar                |Bookshelf                     |bookshelf                     |20.2.13             |DONE      |Manifest: eb:c4:b1:67:8b:f9:0c:db:dc:4f:01:b1:8e:61:64:39:4c:10:85:0b:a6:c4:c7:48:f0:fa:95:f2:cb:08:3a:e5
+		sophisticatedbackpacks-1.20.1-3.23.26.1315.jar    |Sophisticated Backpacks       |sophisticatedbackpacks        |3.23.26.1315        |DONE      |Manifest: NOSIGNATURE
+		carryon-forge-1.20.1-2.1.2.7.jar                  |Carry On                      |carryon                       |2.1.2.7             |DONE      |Manifest: NOSIGNATURE
+		ShieldExpansion-1.20.1-1.2.2.jar                  |Shield Expansion              |shieldexp                     |1.2.2               |DONE      |Manifest: NOSIGNATURE
+		bettercombat-forge-1.9.0+1.20.1.jar               |Better Combat                 |bettercombat                  |1.9.0+1.20.1        |DONE      |Manifest: NOSIGNATURE
+		baguettelib-1.20.1-Forge-1.1.6.jar                |BaguetteLib                   |baguettelib                   |1.1.6               |DONE      |Manifest: NOSIGNATURE
+		raidsenhanced-1.0.2-1.20.1.jar                    |Raids: Enhanced               |raidsenhanced                 |1.0.2               |DONE      |Manifest: NOSIGNATURE
+		fzzy_config-0.7.3+1.20.1+forge.jar                |Fzzy Config                   |fzzy_config                   |0.7.3+1.20.1+forge  |DONE      |Manifest: NOSIGNATURE
+		fabric-api-0.92.6+1.11.14+1.20.1.jar              |Forgified Fabric API          |fabric_api                    |0.92.6+1.11.14+1.20.|DONE      |Manifest: NOSIGNATURE
+		modmenu-bridge-1.11.2+1.20.1.jar                  |Connector Extras ModMenu Bridg|connectorextras_modmenu_bridge|1.11.2+1.20.1       |DONE      |Manifest: NOSIGNATURE
+		fabric-content-registries-v0-4.0.13+a670df1e77.jar|Fabric Content Registries (v0)|fabric_content_registries_v0  |4.0.13+a670df1e77   |DONE      |Manifest: NOSIGNATURE
+		twilightforest-1.20.1-4.3.2508-universal.jar      |The Twilight Forest           |twilightforest                |4.3.2508            |DONE      |Manifest: NOSIGNATURE
+		FarmersDelight-1.20.1-1.2.9.jar                   |Farmer's Delight              |farmersdelight                |1.20.1-1.2.9        |DONE      |Manifest: NOSIGNATURE
+		entity_model_features_forge_1.20.1-2.4.1.jar      |Entity Model Features         |entity_model_features         |2.4.1               |DONE      |Manifest: NOSIGNATURE
+		entity_texture_features_forge_1.20.1-6.2.9.jar    |Entity Texture Features       |entity_texture_features       |6.2.9               |DONE      |Manifest: NOSIGNATURE
+		fabric-api-lookup-api-v1-1.6.37+67f9824077.jar    |Fabric API Lookup API (v1)    |fabric_api_lookup_api_v1      |1.6.37+67f9824077   |DONE      |Manifest: NOSIGNATURE
+		endrem_forge-5.3.3-R-1.20.1.jar                   |End Remastered                |endrem                        |5.3.3-R-1.20.1      |DONE      |Manifest: NOSIGNATURE
+		LetSleepingDogsLie-1.20.1-Forge-1.3.0.jar         |Let Sleeping Dogs Lie         |dogslie                       |1.3.0               |DONE      |Manifest: ae:67:c5:55:fb:7e:f3:4e:5c:71:f4:50:9e:df:a2:b0:32:86:cf:09:f2:fe:9b:db:94:3b:09:88:a2:3d:91:1f
+		reach-entity-attributes-2.4.0.jar                 |Reach Entity Attributes       |reach_entity_attributes       |2.4.0               |DONE      |Manifest: NOSIGNATURE
+		lionfishapi-2.4-Fix.jar                           |LionfishAPI                   |lionfishapi                   |2.4-Fix             |DONE      |Manifest: NOSIGNATURE
+		architectury-bridge-1.11.2+1.20.1.jar             |Connector Extras Architectury |connectorextras_architectury_b|1.11.2+1.20.1       |DONE      |Manifest: NOSIGNATURE
+		L_Enders_Cataclysm-3.27-curios-fix.jar            |cataclysm                     |cataclysm                     |3.27                |DONE      |Manifest: NOSIGNATURE
+		Patchouli-1.20.1-84.1-FORGE.jar                   |Patchouli                     |patchouli                     |1.20.1-84.1-FORGE   |DONE      |Manifest: NOSIGNATURE
+		Connector-1.0.0-beta.46+1.20.1-mod.jar            |Connector                     |connectormod                  |1.0.0-beta.46+1.20.1|DONE      |Manifest: NOSIGNATURE
+		architectury-9.2.14-forge.jar                     |Architectury                  |architectury                  |9.2.14              |DONE      |Manifest: NOSIGNATURE
+		fabric-loot-api-v2-1.2.3+eb28f93e77.jar           |Fabric Loot API (v2)          |fabric_loot_api_v2            |1.2.3+eb28f93e77    |DONE      |Manifest: NOSIGNATURE
+		cupboard-1.20.1-3.0.jar                           |Cupboard utilities            |cupboard                      |1.20.1-3.0          |DONE      |Manifest: NOSIGNATURE
+		ConnectorExtras-1.11.2+1.20.1.jar                 |Connector Extras              |connectorextras               |1.11.2+1.20.1       |DONE      |Manifest: NOSIGNATURE
+		amble-1.1.14-1.20.1+forge-beta.jar                |AmbleKit                      |amblekit                      |1.1.14-1.20.1+forge-|DONE      |Manifest: NOSIGNATURE
+		fabric-networking-api-v1-1.3.14+fb7c822677.jar    |Fabric Networking API (v1)    |fabric_networking_api_v1      |1.3.14+fb7c822677   |DONE      |Manifest: NOSIGNATURE
+		framework-forge-1.20.1-0.7.15.jar                 |Framework                     |framework                     |0.7.15              |DONE      |Manifest: 0d:78:5f:44:c0:47:0c:8c:e2:63:a3:04:43:d4:12:7d:b0:7c:35:37:dc:40:b1:c1:98:ec:51:eb:3b:3c:45:99
+		Towns-and-Towers-1.12-Fabric+Forge.jar            |Towns and Towers              |t_and_t                       |0.0NONE             |DONE      |Manifest: NOSIGNATURE
+		fabric-lifecycle-events-v1-2.2.23+afab492177.jar  |Fabric Lifecycle Events (v1)  |fabric_lifecycle_events_v1    |2.2.23+afab492177   |DONE      |Manifest: NOSIGNATURE
+		effortlessbuilding-1.20.1-3.10.jar                |Effortless Building           |effortlessbuilding            |3.10                |DONE      |Manifest: NOSIGNATURE
+		hats-forge-1.20.1-1.2.2.jar                       |Galena Hats                   |galena_hats                   |1.20.1-1.2.2        |DONE      |Manifest: NOSIGNATURE
+		fabric-key-binding-api-v1-1.0.38+561530ec77.jar   |Fabric Key Binding API (v1)   |fabric_key_binding_api_v1     |1.0.38+561530ec77   |DONE      |Manifest: NOSIGNATURE
+		fabric-transfer-api-v1-3.3.6+631c9cd677.jar       |Fabric Transfer API (v1)      |fabric_transfer_api_v1        |3.3.6+631c9cd677    |DONE      |Manifest: NOSIGNATURE
+		trashslot-forge-1.20-15.1.2.jar                   |TrashSlot                     |trashslot                     |15.1.2              |DONE      |Manifest: NOSIGNATURE
+		sophisticatedstorage-1.20.1-1.3.62.1236.jar       |Sophisticated Storage         |sophisticatedstorage          |1.3.62.1236         |DONE      |Manifest: NOSIGNATURE
+		OctoLib-FORGE-0.5.0.1+1.20.1.jar                  |OctoLib                       |octolib                       |0.5.0.1             |DONE      |Manifest: NOSIGNATURE
+		Perception-FORGE-0.1.4+1.20.1.jar                 |Perception                    |perception                    |0.1.4               |DONE      |Manifest: NOSIGNATURE
+		common-networking-forge-1.0.5-1.20.1.jar          |Common Networking             |commonnetworking              |1.0.5-1.20.1        |DONE      |Manifest: NOSIGNATURE
+		pehkui-bridge-1.11.2+1.20.1.jar                   |Connector Extras Pehkui Bridge|connectorextras_pehkui_bridge |1.11.2+1.20.1       |DONE      |Manifest: NOSIGNATURE
+		fabric-resource-loader-v0-0.11.12+4b4151c077.jar  |Fabric Resource Loader (v0)   |fabric_resource_loader_v0     |0.11.12+4b4151c077  |DONE      |Manifest: NOSIGNATURE
+		obscure_api-15.jar                                |Obscure API                   |obscure_api                   |15                  |DONE      |Manifest: NOSIGNATURE
+		waystones-forge-1.20.1-14.1.17.jar                |Waystones                     |waystones                     |14.1.17             |DONE      |Manifest: NOSIGNATURE
+		fabric-mining-level-api-v1-2.1.52+561530ec77.jar  |Fabric Mining Level API (v1)  |fabric_mining_level_api_v1    |2.1.52+561530ec77   |DONE      |Manifest: NOSIGNATURE
+		Dungeon Crawl-1.20.1-2.3.15.jar                   |Dungeon Crawl                 |dungeoncrawl                  |2.3.15              |DONE      |Manifest: NOSIGNATURE
+		xpfarming-1.3.0-forge-1.20.1.jar                  |XPFarming                     |xpfarming                     |1.3.0               |DONE      |Manifest: NOSIGNATURE
+		aggroindicator-1.1.3+forge1.20.1.jar              |Aggro Indicator               |aggroindicator                |1.1.3+forge1.20.1   |DONE      |Manifest: NOSIGNATURE
+		xp_in_a_jar-1.0.0-forge-1.20.1.jar                |XP in a Jar                   |xp_in_a_jar                   |1.0.0               |DONE      |Manifest: NOSIGNATURE
+		particular-1.20.1-Forge-1.2.7.jar                 |Particular                    |particular                    |1.2.7               |DONE      |Manifest: NOSIGNATURE
+		iChunUtil-1.20.1-Forge-1.0.3.jar                  |iChunUtil                     |ichunutil                     |1.0.3               |DONE      |Manifest: ae:67:c5:55:fb:7e:f3:4e:5c:71:f4:50:9e:df:a2:b0:32:86:cf:09:f2:fe:9b:db:94:3b:09:88:a2:3d:91:1f
+		blueprint-1.20.1-7.1.3.jar                        |Blueprint                     |blueprint                     |7.1.3               |DONE      |Manifest: NOSIGNATURE
+		personality-1.20.1-4.1.0.jar                      |Personality                   |personality                   |4.1.0               |DONE      |Manifest: NOSIGNATURE
+		energy-bridge-1.11.2+1.20.1.jar                   |Connector Extras Energy Bridge|connectorextras_energy_bridge |1.11.2+1.20.1       |DONE      |Manifest: NOSIGNATURE
+		watut-forge-1.20.1-1.2.3.jar                      |What Are They Up To           |watut                         |1.20.1-1.2.3        |DONE      |Manifest: NOSIGNATURE
+		fabric-transitive-access-wideners-v1-4.3.2+1880499|Fabric Transitive Access Widen|fabric_transitive_access_widen|4.3.2+1880499877    |DONE      |Manifest: NOSIGNATURE
+		nyfsspiders-forge-1.20.1-2.1.1.jar                |Nyf's Spiders                 |nyfsspiders                   |2.1.1               |DONE      |Manifest: NOSIGNATURE
+		alexscaves-2.0.2.jar                              |Alex's Caves                  |alexscaves                    |2.0.2               |DONE      |Manifest: NOSIGNATURE
+		simplyswords-forge-1.56.0-1.20.1.jar              |Simply Swords                 |simplyswords                  |1.56.0-1.20.1       |DONE      |Manifest: NOSIGNATURE
+		moonlight-1.20-2.16.5-forge.jar                   |Moonlight Library             |moonlight                     |1.20-2.16.5         |DONE      |Manifest: NOSIGNATURE
+		extragore-1.20.1-5.2.3.1.jar                      |Extra Gore                    |extragore                     |5.2.3.1             |DONE      |Manifest: NOSIGNATURE
+		fabric-blockrenderlayer-v1-1.1.42+1d0da21e77.jar  |Fabric BlockRenderLayer Regist|fabric_blockrenderlayer_v1    |1.1.42+1d0da21e77   |DONE      |Manifest: NOSIGNATURE
+		mixinsquared-forge-0.1.1.jar                      |MixinSquared                  |mixinsquared                  |0.1.1               |DONE      |Manifest: NOSIGNATURE
+		amecsapi-1.5.3+mc1.20-pre1.jar                    |Amecs API                     |amecsapi                      |1.5.3+mc1.20-pre1   |DONE      |Manifest: NOSIGNATURE
+		CreativeCore_FORGE_v2.12.32_mc1.20.1.jar          |CreativeCore                  |creativecore                  |2.12.32             |DONE      |Manifest: NOSIGNATURE
+		nethersdelight-1.20.1-4.0.jar                     |Nether's Delight              |nethersdelight                |1.20.1-4.0          |DONE      |Manifest: NOSIGNATURE
+		Ribbits-1.20.1-Forge-3.0.4.jar                    |Ribbits                       |ribbits                       |1.20.1-Forge-3.0.4  |DONE      |Manifest: NOSIGNATURE
+		Iceberg-1.20.1-forge-1.1.25.jar                   |Iceberg                       |iceberg                       |1.1.25              |DONE      |Manifest: NOSIGNATURE
+		Quark-4.0-462.jar                                 |Quark                         |quark                         |4.0-462             |DONE      |Manifest: NOSIGNATURE
+		supplementaries-1.20-3.1.37.jar                   |Supplementaries               |supplementaries               |1.20-3.1.37         |DONE      |Manifest: NOSIGNATURE
+		amendments-1.20-2.2.1.jar                         |Amendments                    |amendments                    |1.20-2.2.1          |DONE      |Manifest: NOSIGNATURE
+		FastWorkbench-1.20.1-8.0.4.jar                    |Fast Workbench                |fastbench                     |8.0.4               |DONE      |Manifest: NOSIGNATURE
+		ParCool-1.20.1-3.4.1.4.jar                        |ParCool!                      |parcool                       |3.4.1.4             |DONE      |Manifest: NOSIGNATURE
+		Paraglider-forge-20.1.3.jar                       |Paraglider                    |paraglider                    |20.1.3              |DONE      |Manifest: NOSIGNATURE
+		legendarymonsters-2.0.6 MC 1.20.1.jar             |LegendaryMonsters             |legendary_monsters            |1.20.1              |DONE      |Manifest: NOSIGNATURE
+		fabric-biome-api-v1-13.0.14+dc36698e77.jar        |Fabric Biome API (v1)         |fabric_biome_api_v1           |13.0.14+dc36698e77  |DONE      |Manifest: NOSIGNATURE
+		coroutil-forge-1.20.1-1.3.7.jar                   |CoroUtil                      |coroutil                      |1.20.1-1.3.7        |DONE      |Manifest: NOSIGNATURE
+		ferritecore-6.0.1-forge.jar                       |Ferrite Core                  |ferritecore                   |6.0.1               |DONE      |Manifest: 41:ce:50:66:d1:a0:05:ce:a1:0e:02:85:9b:46:64:e0:bf:2e:cf:60:30:9a:fe:0c:27:e0:63:66:9a:84:ce:8a
+		yet_another_config_lib_v3-3.6.6+1.20.1-forge.jar  |YetAnotherConfigLib           |yet_another_config_lib_v3     |3.6.6+1.20.1-forge  |DONE      |Manifest: NOSIGNATURE
+		wakes-1.20.1-Forge-1.0.5.jar                      |Wakes                         |wakes                         |1.0.5               |DONE      |Manifest: NOSIGNATURE
+		emi-bridge-1.11.2+1.20.1.jar                      |Connector Extras EMI Bridge   |connectorextras_emi_bridge    |1.11.2+1.20.1       |DONE      |Manifest: NOSIGNATURE
+		fabric-data-generation-api-v1-12.3.7+369cb3a477.ja|Fabric Data Generation API (v1|fabric_data_generation_api_v1 |12.3.7+369cb3a477   |DONE      |Manifest: NOSIGNATURE
+		fabric-events-interaction-v0-0.6.5+0f26153f77.jar |Fabric Events Interaction (v0)|fabric_events_interaction_v0  |0.6.5+0f26153f77    |DONE      |Manifest: NOSIGNATURE
+		PresenceFootsteps-1.20.1-1.9.1-beta.1.jar         |Presence Footsteps (Forge)    |presencefootsteps             |1.20.1-1.9.1-beta.1 |DONE      |Manifest: NOSIGNATURE
+	Crash Report UUID: 2a667d71-8c86-429e-b698-5193bfcc01ca
+	FML: 47.4
+	Forge: net.minecraftforge:47.4.13

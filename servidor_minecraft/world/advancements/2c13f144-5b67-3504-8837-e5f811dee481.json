@@ -1,0 +1,214 @@
+{
+  "mowziesmobs:root": {
+    "criteria": {
+      "custom_test_name": "2026-05-02 00:12:11 +0000"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:taiga": "2026-05-05 23:04:22 +0000",
+      "minecraft:beach": "2026-05-05 23:09:22 +0000",
+      "minecraft:dark_forest": "2026-05-05 23:10:27 +0000",
+      "minecraft:river": "2026-05-02 03:06:07 +0000",
+      "minecraft:forest": "2026-05-02 00:12:11 +0000",
+      "minecraft:old_growth_spruce_taiga": "2026-05-05 23:05:08 +0000",
+      "minecraft:plains": "2026-05-05 03:21:35 +0000"
+    },
+    "done": false
+  },
+  "dungeons_arise:wda_root": {
+    "criteria": {
+      "WDA": "2026-05-02 00:12:11 +0000"
+    },
+    "done": true
+  },
+  "parcool:grant_parcool_guide": {
+    "criteria": {
+      "tick": "2026-05-02 00:12:11 +0000"
+    },
+    "done": true
+  },
+  "farmersdelight:main/root": {
+    "criteria": {
+      "seeds": "2026-05-02 00:12:11 +0000"
+    },
+    "done": true
+  },
+  "simplyswords:grant_book_on_first_join": {
+    "criteria": {
+      "tick": "2026-05-02 00:12:11 +0000"
+    },
+    "done": true
+  },
+  "cataclysm:root": {
+    "criteria": {
+      "custom_test_name": "2026-05-02 00:12:11 +0000"
+    },
+    "done": true
+  },
+  "repurposed_structures:root": {
+    "criteria": {
+      "always": "2026-05-02 00:12:11 +0000"
+    },
+    "done": true
+  },
+  "biomesoplenty:biomesoplenty/all_biomes": {
+    "criteria": {
+      "cold_desert": "2026-05-05 23:20:03 +0000",
+      "field": "2026-05-05 23:04:37 +0000",
+      "coniferous_forest": "2026-05-02 00:47:24 +0000",
+      "fir_clearing": "2026-05-02 00:12:30 +0000",
+      "rainforest": "2026-05-05 23:24:33 +0000"
+    },
+    "done": false
+  },
+  "biomesoplenty:biomesoplenty/root": {
+    "criteria": {
+      "fir_clearing": "2026-05-02 00:12:30 +0000"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/balanced_diet": {
+    "criteria": {
+      "sweet_berries": "2026-05-05 03:18:51 +0000",
+      "baked_potato": "2026-05-02 00:18:37 +0000",
+      "pumpkin_pie": "2026-05-05 03:18:29 +0000",
+      "golden_apple": "2026-05-02 00:14:09 +0000",
+      "bread": "2026-05-05 23:16:58 +0000",
+      "rotten_flesh": "2026-05-02 00:51:43 +0000"
+    },
+    "done": false
+  },
+  "minecraft:husbandry/root": {
+    "criteria": {
+      "consumed_item": "2026-05-02 00:14:09 +0000"
+    },
+    "done": true
+  },
+  "minecraft:story/obtain_armor": {
+    "criteria": {
+      "iron_helmet": "2026-05-02 00:15:28 +0000"
+    },
+    "done": true
+  },
+  "minecraft:story/shiny_gear": {
+    "criteria": {
+      "diamond_chestplate": "2026-05-02 00:19:08 +0000"
+    },
+    "done": true
+  },
+  "minecraft:adventure/root": {
+    "criteria": {
+      "killed_something": "2026-05-02 00:50:22 +0000"
+    },
+    "done": true
+  },
+  "alexsmobs:alexsmobs/banana_slug": {
+    "criteria": {
+      "killed": "2026-05-02 00:50:22 +0000"
+    },
+    "done": true
+  },
+  "minecraft:adventure/kill_all_mobs": {
+    "criteria": {
+      "minecraft:skeleton": "2026-05-02 03:01:25 +0000",
+      "minecraft:spider": "2026-05-02 03:02:13 +0000",
+      "minecraft:creeper": "2026-05-02 02:57:35 +0000",
+      "minecraft:husk": "2026-05-05 23:06:08 +0000",
+      "minecraft:zombie": "2026-05-02 00:51:01 +0000"
+    },
+    "done": false
+  },
+  "minecraft:adventure/kill_a_mob": {
+    "criteria": {
+      "minecraft:zombie": "2026-05-02 00:51:01 +0000"
+    },
+    "done": true
+  },
+  "minecraft:adventure/lightning_rod_with_villager_no_fire": {
+    "criteria": {
+      "lightning_rod_with_villager_no_fire": "2026-05-02 00:52:42 +0000"
+    },
+    "done": true
+  },
+  "twilightforest:root": {
+    "criteria": {
+      "in_tf": "2026-05-02 00:53:20 +0000"
+    },
+    "done": true
+  },
+  "majruszsdifficulty:game_stage_normal": {
+    "criteria": {
+      "is_triggered": "2026-05-05 03:16:52 +0000"
+    },
+    "done": true
+  },
+  "legendary_monsters:end_root": {
+    "criteria": {
+      "custom_test_name": "2026-05-05 03:16:53 +0000"
+    },
+    "done": true
+  },
+  "legendary_monsters:legendary_monsters_root": {
+    "criteria": {
+      "custom_test_name": "2026-05-05 03:16:53 +0000"
+    },
+    "done": true
+  },
+  "legendary_monsters:nether_root": {
+    "criteria": {
+      "custom_test_name": "2026-05-05 03:16:53 +0000"
+    },
+    "done": true
+  },
+  "dungeons_arise:find_abandoned_temple": {
+    "criteria": {
+      "location0": "2026-05-05 03:21:26 +0000"
+    },
+    "done": true
+  },
+  "minecraft:story/smelt_iron": {
+    "criteria": {
+      "iron": "2026-05-05 03:21:59 +0000"
+    },
+    "done": true
+  },
+  "majruszsdifficulty:bleeding_inflicted": {
+    "criteria": {
+      "bleeding_applied": "2026-05-05 03:25:00 +0000"
+    },
+    "done": true
+  },
+  "majruszsdifficulty:game_stage_expert": {
+    "criteria": {
+      "is_triggered": "2026-05-05 22:58:41 +0000"
+    },
+    "done": true
+  },
+  "dungeons_arise:find_bathhouse": {
+    "criteria": {
+      "location0": "2026-05-05 23:05:37 +0000"
+    },
+    "done": true
+  },
+  "paraglider:pray_to_the_goddess": {
+    "criteria": {
+      "bargain": "2026-05-05 23:07:50 +0000"
+    },
+    "done": true
+  },
+  "minecraft:adventure/sleep_in_bed": {
+    "criteria": {
+      "slept_in_bed": "2026-05-05 23:17:38 +0000"
+    },
+    "done": true
+  },
+  "mowziesmobs:kill_frostmaw": {
+    "criteria": {
+      "frostmaw": "2026-05-05 23:21:01 +0000"
+    },
+    "done": true
+  },
+  "DataVersion": 3465
+}
